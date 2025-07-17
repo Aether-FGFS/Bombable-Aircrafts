@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery>
+    <name type="string">FWSKP Esk 727, E-005 HGV</name>
+    <texture>Liveries/Block20/87-0005.png</texture>
+    <owner type="string">RDAF</owner>
+    <pilot type="string"></pilot>
+    <scheme type="string">Have Glass V</scheme>
+    <block type="int">20</block>
+    <serial type="string">87-0005</serial>
+    <squad type="string">Esk 727 "Craven"</squad>
+    <year type="string">2020</year>
+   </livery>
+   <livery-logo>
+    <texture>Liveries/Block20/WhiteRDAF.logos.png</texture>
+   </livery-logo>
+
+   <livery-patch>
+      <texture>Liveries/Block20/patch.rdaf.png</texture>
+   </livery-patch>
+
+  <livery-pod>
+        <texture>Armament/External-stores/MXU-648.png</texture>
+  </livery-pod>
+
+        <f16>
+            <dragchute type="bool">false</dragchute>
+        </f16>
+        <livery-specular type="double">0.6</livery-specular>
+  </model>
+ </sim>
+</PropertyList>
