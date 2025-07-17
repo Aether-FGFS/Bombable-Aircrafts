@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    <sim>
+        <model> 
+            <livery>
+                <name type="string">ITA MERCENARIES, 22-06 (Fictional)</name>
+                <texture type="string">Liveries/Block60/ITA_MERCENARIES.png</texture>
+                <owner type="string">FICTION</owner>
+                <pilot type="string"></pilot>
+                <scheme type="string">Four-tone camo</scheme>
+                <block type="int">60</block>
+                <serial type="string">N/A</serial>
+                <squad type="string">ITA MERCENARIES</squad>
+                <year type="string">2019</year>
+            </livery>
+            <livery-logo>
+                <texture type="string">Liveries/standard.logos.color.png</texture>
+            </livery-logo>
+
+            <livery-patch>
+                <texture>Liveries/Block60/patch.ITA_MERCENARIES.png</texture>
+            </livery-patch>
+
+            <livery-pod>
+                <texture>Liveries/Block60/pod.ITA_MERCENARIES.png</texture>
+             </livery-pod>
+
+              <f16>
+                <dragchute type="bool">true</dragchute>
+                <cft type="bool">true</cft>
+              </f16>
+              <livery-specular type="double">0.75</livery-specular>
+        </model>
+    </sim>
+</PropertyList>
