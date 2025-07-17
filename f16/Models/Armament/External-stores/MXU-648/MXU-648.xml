@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>Aircraft/f16/Models/Armament/External-stores/MXU-648/MXU-648.ac</path>
+  <effect>
+      <inherits-from>Aircraft/f16/Models/Effects/fuselage/model-combined-fuselage</inherits-from>
+      <parameters>
+          <metallic type="float">0.80</metallic>
+          <ambient-factor type="float">0.35</ambient-factor>
+          <rain-enabled type="int">2</rain-enabled>
+          <ambient-correction type="float">0.00</ambient-correction>
+          <reflection-enabled type="int">0</reflection-enabled>
+      </parameters>
+      <object-name>Shell</object-name>
+      <object-name>Door</object-name>
+      <object-name>Hooks</object-name>
+  </effect>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Door</object-name>
+  <property>canopy/position-norm</property>
+  <factor>120</factor>
+  <center>
+   <x-m>-0.09000</x-m>
+   <y-m>-0.18010</y-m>
+   <z-m>-0.15000</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ </PropertyList>
