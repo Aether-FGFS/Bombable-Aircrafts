@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!-- this is the static non fired model on the aircraft -->
+
+<PropertyList>
+
+	<name>AIM-9X</name>
+	<path>AIM-9X.ac</path>
+
+	<effect>  
+    	<inherits-from>Aircraft/f16/Models/Effects/glass/glassIR</inherits-from>  
+    	<object-name>aim9x_ir-sphere</object-name>
+  	</effect>
+
+	<effect>
+      <inherits-from>Aircraft/f16/Models/Effects/fuselage/model-combined-stores</inherits-from>
+      <object-name>aim9x-body</object-name>
+      <object-name>aim9x-back-fins</object-name>
+      <object-name>aim9x-front-fins</object-name>
+      <object-name>aim9x-thrust-vectoring-fins</object-name>
+      <object-name>aim9x-mounts</object-name>
+  </effect>
+
+</PropertyList>
