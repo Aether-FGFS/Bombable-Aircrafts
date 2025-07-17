@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    <title>MiG-23MLD</title>
+    <key>
+        <name>b</name>
+        <desc>Hold to deploy brakes</desc>
+    </key>
+    <key>
+        <name>B</name>
+        <desc>Toggle parking brake</desc>
+    </key>
+    <key>
+        <name>Ctrl+b</name>
+        <desc>Toggle speedbrake</desc>
+    </key>
+    <key>
+        <name>C</name>
+        <desc>Toggle canopy</desc>
+    </key>
+    <key>
+        <name>e</name>
+        <desc>Weapon trigger</desc>
+    </key>
+    <key>
+        <name>g/G</name>
+        <desc>Gear up/down</desc>
+    </key>
+    <key>
+        <name>m</name>
+        <desc>Toggle masterarm</desc>
+    </key>
+    <key>
+        <name>o</name>
+        <desc>Deploy dragchute</desc>
+    </key>
+    <key>
+        <name>O</name>
+        <desc>Release dragchute</desc>
+    </key>
+    <key>
+        <name>w</name>
+        <desc>Select next weapon</desc>
+    </key>
+    <key>
+        <name>q</name>
+        <desc>Trigger flare release</desc>
+    </key>
+    <key>
+        <name>i</name>
+        <desc>CMD up</desc>
+    </key>
+    <key>
+        <name>j</name>
+        <desc>CMD left</desc>
+    </key>
+    <key>
+        <name>k</name>
+        <desc>CMD down</desc>
+    </key>
+    <key>
+        <name>l</name>
+        <desc>CMD right</desc>
+    </key>
+    <key>
+        <name>y/Y</name>
+        <desc>Select next/prev radar contact</desc>
+    </key>
+    <key>
+        <name>&gt;</name>
+        <desc>Wing sweep aft</desc>
+    </key>
+    <key>
+        <name>&lt;</name>
+        <desc>Wing sweep forward</desc>
+    </key>
+    <key>
+        <name>[ ]</name>
+        <desc>Flaps up/down</desc>
+    </key>
+    <key>
+        <name>F6</name>
+        <desc>Eject</desc>
+    </key>
+    <text>Gunsight
+-------
+The ASP-17ML is a gunsight (ASP) with integrated radar screen (RP). Use the lever at the buttom left to switch between the two.
+
+The gunsight has different operating modes, which can be selected with the rotary knob and the little switch next to it.
+M: Modes against maneuvering targets (aerial and ground targets)
+PZ: deflection mode when firing the gun
+RUTSH: manual mode when firing guided IR-missiles
+N.SIN: non-synchronous mode when firing unguided rockets
+NM: Modes against non-maneuvering targets (ground targets)
+OB: bombing with conventional bombs (CCIP)
+RUTSH: manual bombing mode
+TB: bombing with retarded bombs (CCIP)
+
+The radar screen can show the following symbols:
+30: radar range scale 30km
+15: radar altimeter scale 1500m
+A:  radar lock (radar in STT mode)
+TP: IRST lock
+cross: reference symbol (e.g. for flight director)
+circle: flight director
+dot: radar direction in STT mode (position of target as seen through the window)
+=: friend in RWS mode (radar screen on gunsight)
+-: foe in RWS mode (radar screen on gunsight)
+1-4: missiles ready to fire
+K: localizer signal received
+G: glideslope signal received
+PR: launch authorization
+lines: range to target, missile range (min/max), radar height, artificial horizon
+
+RWR
+----
+The rectangular device on the right hand panel is the SPO-15 radar warning receiver. The small green lights around the center indicate the direction of received radar signals, the bigger yellow lights next to it indicate the biggest threat, the small rectangular lights around the center indicate the signal strength of the biggest threat and the lights at the bottom indicate the radar type. The types are as follows (from left to right):
+
+1.) Airborne radar
+2.) Long-range radar
+3.) Medium-range radar
+4.) Short-range radar
+5.) Early warning radar
+6.) AWACS
+
+A/A Weapons
+----------
+R-3S: Short range missile with IR (infrared) seeker (copy of AIM-9B). Cannot be placed at outer pylons (smoke damages aircraft engine).
+R-13M: Short range missile with IR seeker (similar to AIM-9G)
+R-24R: BVR (beyond visual range) missile with SAR (semi-active radar) seeker
+R-24T: BVR (beyond visual range) missile with IR seeker
+R-60M: Leightweight short range missile with IR seeker
+R-73: Advanced short range IR missile with thrust vector control
+
+A/G Weapons
+----------
+UPK-23: External 23mm cannon
+UB-32: Launcher for unguided S-5 missiles
+S-24: Unguided missile
+Kh-23: Remote controlled missile (i,j,k,l keys)
+FAB-500: Bomb
+RBK-500: Cluster bomb
+</text>
+</PropertyList>
