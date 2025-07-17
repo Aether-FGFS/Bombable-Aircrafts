@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<!--
+Used for non fired GBU-12
+-->
+
+  <path>GBU-12.ac</path>
+
+  <effect>  
+    <inherits-from>Aircraft/f16/Models/Effects/glass/glassIR</inherits-from>  
+    <object-name>GBU-12_Glass</object-name> 
+  </effect>
+
+  <effect>
+      <inherits-from>Aircraft/f16/Models/Effects/fuselage/model-combined-stores</inherits-from>
+      <object-name>GBU-12</object-name>
+      <object-name>GBU-12_Hooks</object-name>
+      <object-name>GBU-12_Tail</object-name>
+      <object-name>GBU-12_FrontWing</object-name>
+      <object-name>GBU-12_Wing.001</object-name>
+      <object-name>GBU-12_Wing.002</object-name>
+      <object-name>GBU-12_Wing.003</object-name>
+      <object-name>GBU-12_Wing.004</object-name>
+  </effect>
+
+</PropertyList>
