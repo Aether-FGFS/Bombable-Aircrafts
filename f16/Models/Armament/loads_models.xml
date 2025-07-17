@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<PropertyList>
+  
+  <!-- ===================== START ARMAMENT =========================== -->
+<!-- The armament section should probably be placed in a seperate file -->
+
+
+
+  
+ 
+<!-- =============================================================================================================  --> 
+<!-- =========================================== Station 5 =======================================================  -->
+<!-- =============================================================================================================  -->  
+ <model>
+  <name>AN_ALQ-131</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/AN_ALQ-131/AN_ALQ-131.xml</path>
+  <offsets>
+   <x-m>-0.02</x-m>
+   <y-m>0</y-m>
+   <z-m>-1.228</z-m>
+   <!--<z-m>-1.15</z-m>-->
+   <pitch-deg>-0.6</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>AN_ALQ-184</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/AN_ALQ-184/AN_ALQ-184.xml</path>
+  <offsets>
+   <x-m>0.265</x-m>
+   <y-m>0</y-m>
+   <z-m>-1.0215</z-m>
+   <pitch-deg>-0.6</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>AN_ALQ-188</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/AN_ALQ-188/AN_ALQ-188.xml</path>
+  <offsets>
+   <x-m>0.24</x-m>
+   <y-m>0</y-m>
+   <z-m>-1.048</z-m>
+   <pitch-deg>-0.6</pitch-deg>
+  </offsets>
+ </model>
+  
+ <model>
+  <name>VentralTank</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/Fueltanks/300G.xml</path>
+  <offsets>
+   <x-m>-0.055</x-m>
+   <y-m>0</y-m>
+   <z-m>-1.21</z-m>
+   <pitch-deg>-2</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Station5_MXU-648</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/MXU-648/MXU-648.xml</path>
+  <offsets>
+   <x-m>-0.02</x-m>
+   <y-m>0</y-m>
+   <z-m>-1.136</z-m>
+   <pitch-deg>-0.5</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Station5_B61-7</name>
+  <path>Aircraft/f16/Models/Armament/Weapons/B61-7/B61-7.xml</path>
+  <offsets>
+   <x-m>0.09</x-m>
+   <y-m>0</y-m>
+   <z-m>-1.064</z-m>
+   <pitch-deg>-0.6</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Station5_B61-12</name>
+  <path>Aircraft/f16/Models/Armament/Weapons/B61-12/B61-12.xml</path>
+  <offsets>
+   <x-m>0.09</x-m>
+   <y-m>0</y-m>
+   <z-m>-1.064</z-m>
+   <pitch-deg>-0.6</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Centerpylon</name>
+  <path>Aircraft/f16/Models/Central-pylon.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0.02</y-m>
+   <z-m>0</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ 
+ 
+
+ <!-- =============================================================================================================  --> 
+<!-- =========================================== Station 10 =======================================================  -->
+<!-- =============================================================================================================  --> 
+
+<model>
+  <name>Station10_SniperATP</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/SniperATP/AN-AAQ-33.xml</path>
+  <offsets>
+   <x-m>-2.6</x-m>
+   <y-m>0.675</y-m>
+   <z-m>-1.005</z-m>
+   <pitch-deg>-0.5</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Station10_LANTIRNtarget</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/LANTIRN/AN-AAQ-14.xml</path>
+  <offsets>
+   <x-m>-2.3</x-m>
+   <y-m>0.69</y-m>
+   <z-m>-1.01</z-m>
+   <pitch-deg>-0.5</pitch-deg>
+  </offsets>
+ </model>
+
+  <model>
+  <name>Station10_LITENINGat</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/LITENING_AT/AN-AAQ-28.xml</path>
+  <offsets>
+   <x-m>-2.25</x-m>
+   <y-m>0.69</y-m>
+   <z-m>-1.02</z-m>
+   <pitch-deg>-0.5</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Station10_LegionPodirst</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/LegionPod_IRST/LegionPod_IRST.xml</path>
+  <offsets>
+   <x-m>-2.49</x-m>
+   <y-m>0.69</y-m>
+   <z-m>-1.027</z-m>
+   <pitch-deg>-0.5</pitch-deg>
+  </offsets>
+ </model>
+
+<model>
+  <name>Station10_HARMts</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/HARM_TS/AN-ASQ-213.xml</path>
+  <offsets>
+   <x-m>-2.75</x-m>
+   <y-m>0.727</y-m>
+   <z-m>-0.95</z-m>
+   <pitch-deg>-0.5</pitch-deg>
+   <roll-deg>21.0</roll-deg>
+  </offsets>
+ </model>
+
+<model>
+  <name>Station11_LANTIRNnav</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/LANTIRN/AN-AAQ-13.xml</path>
+  <offsets>
+   <x-m>-2.45</x-m>
+   <y-m>-0.66</y-m>
+   <z-m>-1.02</z-m>
+   <pitch-deg>-0.5</pitch-deg>
+  </offsets>
+ </model>
+
+<model>
+  <name>Station11_HARMts</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/HARM_TS/AN-ASQ-213.xml</path>
+  <offsets>
+   <x-m>-2.75</x-m>
+   <y-m>-0.695</y-m>
+   <z-m>-0.95</z-m>
+   <pitch-deg>-0.5</pitch-deg>
+   <roll-deg>-21.0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Station11_SniperATP</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/SniperATP/AN-AAQ-33.xml</path>
+  <offsets>
+   <x-m>-2.6</x-m>
+   <y-m>-0.675</y-m>
+   <z-m>-1.005</z-m>
+   <pitch-deg>-0.5</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Podpylon_right</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/Pylons/fuselage-pylon-right.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+
+<model>
+  <name>Podpylon_left</name>
+  <path>Aircraft/f16/Models/Armament/External-stores/Pylons/fuselage-pylon-left.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+
+<!-- ======================= END ARMAMENT =========================== -->
+</PropertyList>
