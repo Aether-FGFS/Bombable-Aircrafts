@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery>
+    <name type="string">9.AJU 191 Filo, #0083</name>
+    <texture>Liveries/Block50/94-0083.png</texture>
+    <owner type="string">TuAF</owner>
+    <pilot type="string"></pilot>
+    <scheme type="string"></scheme>
+    <block type="int">50</block>
+    <serial type="string">94-0083</serial>
+    <squad type="string">191 Filo</squad>
+    <year type="string">2021</year>
+   </livery>
+   <livery-logo>
+    <texture>Liveries/Block50/turkish.logos.png</texture>
+   </livery-logo>
+
+   <livery-patch>
+      <texture>Liveries/Block50/patch.turkey.png</texture>
+   </livery-patch>
+
+  <livery-pod>
+        <texture>Armament/External-stores/MXU-648.png</texture>
+  </livery-pod>
+
+    <f16>
+        <dragchute type="bool">false</dragchute>
+        <cft type="bool">false</cft>
+    </f16>
+    <livery-specular type="double">0.25</livery-specular>
+  </model>
+ </sim>
+</PropertyList>

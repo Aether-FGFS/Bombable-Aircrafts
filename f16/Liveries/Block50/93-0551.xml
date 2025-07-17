@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery>
+    <name type="string">169FW, 157FS "Unit Flagship"</name>
+    <texture>Liveries/Block50/93-0551.png</texture>
+    <owner type="string">USAF-ANG</owner>
+    <pilot type="string"></pilot>
+    <scheme type="string">Have Glass V</scheme>
+    <block type="int">52</block>
+    <serial type="string">93-0551</serial>
+    <squad type="string">157th FS "Swamp Fox"</squad>
+    <year type="string">2020</year>
+   </livery>
+
+   <livery-logo>
+    <texture>Liveries/standard.white.logos2.png</texture>
+   </livery-logo>
+
+   <livery-patch>
+      <texture>Liveries/Block50/patch.SwampFox.png</texture>
+   </livery-patch>
+
+  <livery-pod>
+        <texture>Liveries/Block50/pod.swampfox.png</texture>
+  </livery-pod>
+
+        <f16>
+            <dragchute type="bool">false</dragchute>
+            <cft type="bool">false</cft>
+        </f16>
+        <livery-specular type="double">0.6</livery-specular>
+  </model>
+ </sim>
+</PropertyList>
