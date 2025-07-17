@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList include="Systems/initialization.xml">
+    <sim include="Systems/views.xml">
+        <expected-aircraft-dir-name>MiG-23MLD</expected-aircraft-dir-name>
+        <description>Mikoyan-Gurevich MiG-23ML</description>
+        <variant-of>MiG-23MLD</variant-of>
+        <variant-id type="int">2</variant-id>
+        <author>Tim Samedov (3D), Daniel Overbeck, Renaud "Wolf" Roquefort (Liveries)</author>
+        <long-description>The Mikoyan-Gurevich MiG-23ML Flogger-G is the mid-life upgrade of this 3rd generation fighter jet. It has Tumanskiy R35-300 engines and was produced since 1975.</long-description>
+        <startup>
+            <splash-texture>Aircraft/MiG-23MLD/splashML.png</splash-texture>
+        </startup>
+        <rating>
+            <FDM type="int">3</FDM>
+            <systems type="int">3</systems>
+            <cockpit type="int">5</cockpit>
+            <model type="int">5</model>
+        </rating>
+        <flight-model>jsb</flight-model>
+        <aero>MiG-23MLD</aero>
+        <model>
+            <path>Aircraft/MiG-23MLD/Models/MiG-23ML.xml</path>
+        </model>
+        <instrumentation>
+            <path>Systems/instrumentation.xml</path>
+        </instrumentation>
+        <flight-recorder include="Systems/flight-recorder.xml"/>
+        <menubar include="gui/menubar.xml"/>
+        <help include="gui/help.xml"/>
+        <sound>
+            <path>Sounds/Sounds.xml</path>
+        </sound>
+        <multiplay>
+            <generic>
+                <bool  n="0" type="bool" alias="/damage/sounds/explode-on"/>
+                <bool  n="1" type="bool" alias="/damage/fire/serviceable"/>
+                <bool  n="2" type="bool">true</bool><!-- this must stay true to prevent bug in MP protocol for bools -->
+                <bool  n="10" type="bool"  alias="/fdm/jsbsim/fcs/dogtooth"/>
+                <bool  n="11" type="bool"  alias="/fdm/jsbsim/fcs/vortex-generator"/>
+                <bool  n="12" type="bool"  alias="/fdm/jsbsim/fcs/cfd"/>
+                <float n="0" type="double" alias="/fdm/jsbsim/fcs/canopy-pos-norm"/>
+                <float n="1" type="double" alias="/fdm/jsbsim/fcs/wingsweep-pos-norm"/>
+                <float n="2" type="double" alias="/engines/engine[0]/nozzle-pos-norm"/>
+                <float n="3" type="double" alias="/engines/engine[0]/augmentation"/>
+            </generic>
+        </multiplay>
+        <flaps>
+            <setting>0.0</setting>
+            <setting>0.5</setting>
+            <setting>1.0</setting>
+        </flaps>
+        <submodels>
+            <serviceable type="bool">true</serviceable>
+            <path>Aircraft/MiG-23MLD/Systems/submodels.xml</path>
+        </submodels>
+    </sim>
+    <input>
+        <keyboard include="Systems/keyboard.xml"/>
+    </input>
+    <nasal include="Systems/nasal.xml"/>
+    <payload include="Systems/payload.xml"/>
+</PropertyList>
