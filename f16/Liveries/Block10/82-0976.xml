@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery> 
+    <name type="string">NASA Testbed, N816NA</name>
+    <texture>Liveries/Block10/82-0976.png</texture>
+    <owner type="string">NASA</owner>
+    <pilot type="string"></pilot>
+    <scheme type="string"></scheme>
+    <block type="int">10</block>
+    <serial type="string">82-0976</serial>
+    <squad type="string">NASA</squad>
+    <year type="string">1991</year>
+   </livery>
+
+   <livery-logo>
+    <texture>Liveries/standard.logos.png</texture>
+   </livery-logo>
+
+   <livery-patch>
+      <texture>Liveries/patch.default.png</texture>
+   </livery-patch>
+
+   <livery-pod>
+     <texture>Liveries/Block10/pod.NASA.png</texture>
+   </livery-pod>
+
+  <f16>
+     <dragchute type="bool">false</dragchute>
+     <link16 type="bool">false</link16>
+  </f16>
+  <livery-specular type="double">0.25</livery-specular>
+  </model>
+ </sim>
+
+  <f16>
+     <ejected type="bool">false</ejected>
+  </f16>
+</PropertyList>

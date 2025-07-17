@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery> 
+    <name type="string">53WG, 82ATRS #QF-004</name>
+    <texture>Liveries/Block10/83-1110.png</texture>
+    <owner type="string">USAF</owner>
+    <pilot type="string"></pilot>
+    <scheme type="string"></scheme>
+    <block type="int">10</block>
+    <serial type="string">83-1110</serial>
+    <squad type="string">82nd ATRS</squad>
+    <year type="string">2013</year>
+   </livery>
+
+   <livery-logo>
+    <texture>Liveries/standard.logos.png</texture>
+   </livery-logo>
+
+   <livery-patch>
+      <texture>Liveries/Block20/patch.zombie.png</texture>
+   </livery-patch>
+
+   <livery-pod>
+        <texture>Armament/External-stores/MXU-648.png</texture>
+   </livery-pod>
+
+  <f16>
+     <dragchute type="bool">false</dragchute>
+     <link16 type="bool">false</link16>
+  </f16>
+  <livery-specular type="double">0.35</livery-specular>
+  </model>
+ </sim>
+
+  <f16>
+     <ejected type="bool">true</ejected>
+  </f16>
+</PropertyList>
