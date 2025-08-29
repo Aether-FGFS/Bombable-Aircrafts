@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <path>secspeed.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10</max-m>
+ </animation>
+ 
+<animation>
+ <type>material</type> 
+ <object-name>Face</object-name>
+ <object-name>Needle</object-name>
+ <emission>	
+  <red>1</red>	
+  <green>0.3</green>	
+  <blue>0.3</blue>
+  <factor-prop>controls/lighting/instruments-norm</factor-prop>
+ </emission>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>Needle</object-name>
+  <condition>
+   <greater-than>
+    <property>systems/electrical/outputs/battery</property>
+    <value>20</value>
+   </greater-than>
+  </condition>
+  <property>instrumentation/airspeed-indicator[1]/indicated-speed-kt</property>
+  <interpolation>
+    <entry><ind>27.4</ind><dep>0.0</dep></entry>
+    <entry><ind>109</ind><dep>30</dep></entry>
+    <entry><ind>163.5</ind><dep>103</dep></entry>
+    <entry><ind>218</ind><dep>150</dep></entry>
+    <entry><ind>272.5</ind><dep>186</dep></entry>
+    <entry><ind>327</ind><dep>217</dep></entry>
+    <entry><ind>381.5</ind><dep>242</dep></entry>
+    <entry><ind>436</ind><dep>265</dep></entry>
+    <entry><ind>545</ind><dep>304</dep></entry>
+    <entry><ind>654</ind><dep>336</dep></entry>
+    <entry><ind>708.5</ind><dep>345</dep></entry>
+  </interpolation>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+</animation>
+
+</PropertyList>

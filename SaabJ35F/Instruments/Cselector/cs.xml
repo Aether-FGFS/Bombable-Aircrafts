@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>cs.ac</path>
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10</max-m>
+ </animation>
+ 
+ <animation>
+  <type>material</type> 
+  <object-name>Face10</object-name>
+  <object-name>Face360</object-name>
+  <object-name>Cover</object-name>
+  <emission>	
+   <red>1</red>	
+   <green>0.3</green>	
+   <blue>0.3</blue>
+   <factor-prop>controls/lighting/instruments-norm</factor-prop>
+  </emission>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Face360</object-name>
+  <property>instrumentation/heading-indicator/heading-bug-deg</property>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Face10</object-name>
+  <property>instrumentation/heading-indicator/heading-bug-deg</property>
+  <factor>36</factor>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <!--             Course setting       -->  
+<animation>
+        <type>knob</type>
+        <object-name>Knob</object-name>
+        <property>instrumentation/heading-indicator/heading-bug-deg</property>
+        <factor>1</factor>
+        <center>
+            <x-m>0.00858</x-m>
+            <y-m>-0.03838</y-m>
+            <z-m>-0.03255</z-m>
+        </center>
+        <axis>
+          <x>1</x>
+          <y>0</y>
+          <z>0</z>
+        </axis>
+
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/heading-indicator/heading-bug-deg</property>
+                <factor>1</factor>
+                <min>0</min>
+                <max>360</max>                
+                <wrap>true</wrap>
+            </binding>
+        </action>
+        
+        <shift-action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/heading-indicator/heading-bug-deg</property>
+                <factor>10</factor>
+                <min>0</min>
+                <max>360</max>                
+                <wrap>true</wrap>
+            </binding>
+        </shift-action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>cs</tooltip-id>
+      <label>Selected course: %3.0f°</label>
+      <measure-text>Selected course: 359d</measure-text>
+      <property>instrumentation/heading-indicator/heading-bug-deg</property>
+      <mapping>degrees</mapping>
+     </binding>
+   </hovered>
+    </animation>
+
+</PropertyList>
+
+

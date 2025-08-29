@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>gearindicator.ac</path>
+
+ <animation>
+  <type>material</type> 
+  <object-name>NoseW</object-name>
+  <condition>
+      <equals>
+        <property>/gear/gear[0]/position-norm</property>
+        <value>1</value>
+      </equals>
+  </condition>
+  <emission>
+   <red>0.0</red>
+   <green>1.0</green>
+   <blue>0.0</blue>
+   <factor-prop>controls/lighting/indicator-norm</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>NoseW</object-name>
+    <condition>
+      <greater-than>
+        <property>systems/electrical/outputs/inst_ac</property>
+        <value>24</value>
+      </greater-than>
+  </condition>
+  <property>/gear/gear[0]/position-norm</property>
+  <factor>0.5</factor>
+  <step>0.5</step>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>material</type> 
+  <object-name>LeftW</object-name>
+  <condition>
+      <equals>
+        <property>/gear/gear[1]/position-norm</property>
+        <value>1</value>
+      </equals>
+  </condition>
+  <emission>
+   <red>0.0</red>
+   <green>1.0</green>
+   <blue>0.0</blue>
+   <factor-prop>controls/lighting/indicator-norm</factor-prop>
+   <step>1</step>
+  </emission>
+ </animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>LeftW</object-name>
+  <condition>
+    <greater-than>
+      <property>systems/electrical/outputs/inst_ac</property>
+      <value>24</value>
+  </greater-than>
+  </condition>
+  <property>/gear/gear[1]/position-norm</property>
+  <factor>0.5</factor>
+  <step>0.5</step>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>material</type> 
+  <object-name>RightW</object-name>
+  <condition>
+      <equals>
+        <property>/gear/gear[2]/position-norm</property>
+        <value>1</value>
+      </equals>
+  </condition>
+  <emission>
+   <red>0.0</red>
+   <green>1.0</green>
+   <blue>0.0</blue>
+   <factor-prop>controls/lighting/indicator-norm</factor-prop>
+   <step>1</step>
+  </emission>
+ </animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>RightW</object-name>
+  <condition>
+    <greater-than>
+      <property>systems/electrical/outputs/inst_ac</property>
+      <value>24</value>
+  </greater-than>
+  </condition>
+  <property>/gear/gear[2]/position-norm</property>
+  <factor>0.5</factor>
+  <step>0.5</step>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>material</type> 
+  <object-name>TailW</object-name>
+  <condition>
+      <equals>
+        <property>/gear/gear[3]/position-norm</property>
+        <value>1</value>
+      </equals>
+  </condition>
+  <emission>
+   <red>0.0</red>
+   <green>1.0</green>
+   <blue>0.0</blue>
+   <factor-prop>controls/lighting/indicator-norm</factor-prop>
+   <step>1</step>
+  </emission>
+ </animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>TailW</object-name>
+  <condition>
+    <greater-than>
+      <property>systems/electrical/outputs/inst_ac</property>
+      <value>24</value>
+  </greater-than>
+  </condition>
+  <property>/gear/gear[3]/position-norm</property>
+  <factor>0.5</factor>
+  <step>0.5</step>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+  </axis>
+</animation>
+
+</PropertyList>

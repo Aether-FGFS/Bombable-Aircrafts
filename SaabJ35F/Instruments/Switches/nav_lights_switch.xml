@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>nav_lights_switch.ac</path>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Pin</object-name>
+  <property>/instrumentation/switches/nav-lights/pos</property>
+  <factor>-90</factor>
+  <offset-deg>180</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Pin</object-name>
+  <expression>
+    <product>
+      <min>
+        <property>/instrumentation/switches/nav-lights/pos</property>
+        <value>1</value>
+      </min>
+      <value>25</value>
+    </product>
+  </expression>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>knob</type>
+  <object-name>Pin</object-name>
+  <hovered>
+   <binding>
+    <condition>
+     <property>instrumentation/tooltip</property>
+    </condition>
+    <command>set-tooltip</command>
+    <tooltip-id>pin</tooltip-id>
+    <label>%s</label>
+     <property>/instrumentation/switches/nav-lights/label</property>
+   </binding>
+  </hovered>
+    <action>
+      <binding>
+        <command>nasal</command>
+        <script>SaabJ35F.nav_light_handler();</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>SaabJ35F.sound_helper("sound-small");</script>
+      </binding>
+   </action>
+ </animation>
+  
+</PropertyList>

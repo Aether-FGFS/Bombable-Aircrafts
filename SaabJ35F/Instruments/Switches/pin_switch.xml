@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>pin_switch.ac</path>
+
+ <params>
+  <pos>/instrumentation/switches/default/pos</pos>
+  <label>/instrumentation/switches/default/label</label>
+ </params>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Pin</object-name>
+  <property alias="../../params/pos"/>
+  <factor>-50</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>Pin</object-name>
+  <hovered>
+   <binding>
+    <condition>
+     <property>instrumentation/tooltip</property>
+    </condition>
+    <command>set-tooltip</command>
+    <tooltip-id>pin</tooltip-id>
+    <label>%s</label>
+     <property alias="../../../../params/label"/>
+   </binding>
+  </hovered>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property alias="../../../../params/pos"/>
+   </binding>
+   <binding>
+    <command>nasal</command>
+      <script>SaabJ35F.sound_helper("sound-small");</script>
+   </binding>
+  </action>
+ </animation>
+  
+</PropertyList>
