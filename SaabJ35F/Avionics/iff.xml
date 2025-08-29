@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>iff.ac</path>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Knob_on</object-name>
+        <property>/instrumentation/iff/pwr</property>
+        <factor>-40</factor>
+        <center>
+            <x-m>-0.04054</x-m><y-m>0.03151</y-m><z-m>0.00631</z-m>
+        </center>
+        <axis>
+            <x>0</x><y>0</y><z>1</z>
+        </axis>
+        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/instrumentation/iff/pwr</property>
+                <value>0</value>
+                <value>1</value>
+                <value>2</value>
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+              <command>nasal</command>
+              <script>SaabJ35F.iff.pwr_knob();</script>
+            </binding>
+            <binding>
+              <command>nasal</command>
+              <script>SaabJ35F.sound_helper("sound-small");</script>
+            </binding>
+        </action>
+      <hovered>
+       <binding>
+        <condition>
+         <property>instrumentation/tooltip</property>
+        </condition>
+        <command>set-tooltip</command>
+        <tooltip-id>IFFpwr</tooltip-id>
+        <label>IFF %s</label>
+        <measure-text>IFF off</measure-text>
+        <mapping>nasal</mapping>
+        <property>/instrumentation/iff/pwr</property>
+        <script>
+          var modes=["Off", "Standby", "On"];
+          return modes[arg[0]];
+        </script>
+       </binding>
+     </hovered>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Knob_code</object-name>
+        <property>/instrumentation/iff/crypt</property>
+        <factor>-30</factor>
+        <offset-deg>30</offset-deg>
+        <center>
+            <x-m>0.00741</x-m><y-m>0.024147</y-m><z-m>0.0066</z-m>
+        </center>
+        <axis>
+            <x>0</x><y>0</y><z>1</z>
+        </axis>
+        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/instrumentation/iff/crypt</property>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+                <value>4</value>
+                <value>5</value>
+                <value>6</value>
+                <value>7</value>
+                <value>8</value>
+                <value>9</value>
+                <value>10</value>
+                <value>11</value>
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+              <command>nasal</command>
+                <script>
+                    SaabJ35F.sound_helper("sound-small");
+                </script>
+            </binding>
+        </action>
+      <hovered>
+       <binding>
+        <condition>
+         <property>instrumentation/tooltip</property>
+        </condition>
+        <command>set-tooltip</command>
+        <tooltip-id>iffcode</tooltip-id>
+        <label>Code: %2d</label>
+        <measure-text>Code: 11</measure-text>
+        <property>/instrumentation/iff/crypt</property>
+       </binding>
+     </hovered>
+    </animation>
+    
+
+    
+    <animation>
+        <type>slider</type>
+        <object-name>switch_test</object-name>
+        <property>/instrumentation/iff/test</property>
+        <factor>0.003</factor>
+        <axis>
+            <x>0</x><y>1</y><z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/instrumentation/iff/test</property>
+                <value>-1</value>
+                <value>0</value>
+                <value>1</value>
+            </binding>
+            <binding>
+              <command>nasal</command>
+              <script>SaabJ35F.iff.test();</script>
+            </binding>    
+        </action>
+        <hovered>
+       <binding>
+        <condition>
+         <property>instrumentation/tooltip</property>
+        </condition>
+        <command>set-tooltip</command>
+        <tooltip-id>ifftest</tooltip-id>
+        <label>Test: %s</label>
+        <measure-text>Mode: II</measure-text>
+        <mapping>nasal</mapping>
+        <property>/instrumentation/iff/test</property>
+        <script>
+          var modes=["I", "-", "II"];
+          return modes[arg[0]+1];
+        </script>
+       </binding>
+     </hovered>
+    </animation>
+    
+ <animation>
+  <type>material</type> 
+  <object-name>ind_light</object-name>
+  <condition>
+    <property>/instrumentation/iff/indicator</property>
+  </condition>				
+  <emission>
+   <red>1.0</red>
+   <green>1.0</green>
+   <blue>0.3</blue>
+   <factor>0.8</factor>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>ind_light</object-name>
+  <property>/instrumentation/iff/indicator</property>
+  <factor>0.5</factor>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+  </axis>
+ </animation>
+
+</PropertyList>
+

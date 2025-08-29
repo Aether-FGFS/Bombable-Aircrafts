@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>autopilot.ac</path>
+
+  
+<!-- Mode selectors -->
+
+ <animation>
+  <object-name>On</object-name>
+  <type>rotate</type>
+  <property>/autopilot/enabled</property>
+  <factor>44</factor>
+  <center>
+   <x-m>-0.006765</x-m>
+   <y-m>0.02676</y-m>
+   <z-m>-0.04136</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>Altpick</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>SaabJ35F.auto_setting("alt");</script>
+   </binding>
+   </action>
+   <hovered>
+       <binding>
+        <condition>
+         <property>instrumentation/tooltip</property>
+        </condition>
+        <command>set-tooltip</command>
+        <tooltip-id>autalt</tooltip-id>
+        <label>Altitude mode</label>
+       </binding>
+     </hovered>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>Attpick</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>SaabJ35F.auto_setting("att");</script>
+   </binding>
+   </action>
+      <hovered>
+       <binding>
+        <condition>
+         <property>instrumentation/tooltip</property>
+        </condition>
+        <command>set-tooltip</command>
+        <tooltip-id>autatt</tooltip-id>
+        <label>Attitude mode</label>
+       </binding>
+     </hovered>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>Damppick</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>SaabJ35F.auto_setting("dmp");</script>
+   </binding>
+   </action>
+      <hovered>
+       <binding>
+        <condition>
+         <property>instrumentation/tooltip</property>
+        </condition>
+        <command>set-tooltip</command>
+        <tooltip-id>autdmp</tooltip-id>
+        <label>Damping</label>
+       </binding>
+     </hovered>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>On</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>property-toggle</command>
+      <property>/autopilot/enabled</property>
+   </binding>
+   </action>
+   <hovered>
+       <binding>
+        <condition>
+         <property>instrumentation/tooltip</property>
+        </condition>
+        <command>set-tooltip</command>
+        <tooltip-id>Autopilot: %s</tooltip-id>
+        <label>Autopilot off</label>
+        <mapping>on-off</mapping>
+        <property>/autopilot/enabled</property>
+       </binding>
+     </hovered>
+ </animation>
+
+<!-- Controls -->
+
+ <animation>
+  <name>Turn setting</name>
+  <type>knob</type>
+  <object-name>Turn</object-name>
+  <property>/autopilot/settings/target-roll-deg</property>
+  <factor>-1</factor>
+  <center>
+   <x-m>0.005343</x-m>
+   <y-m>-0.02563</y-m>
+   <z-m>0.03602</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+     <action>
+       <binding>
+         <command>property-adjust</command>
+         <property>autopilot/settings/target-roll-deg</property>
+         <factor>1</factor>
+         <min>-45</min>
+         <max>45</max>
+         <wrap>false</wrap>
+      </binding>
+   </action>
+   <shift-action>
+    <binding>
+      <command>property-assign</command>
+      <property>autopilot/settings/target-roll-deg</property>
+      <value>0.0</value>
+    </binding>
+   </shift-action>
+  <hovered>
+       <binding>
+        <condition>
+         <property>instrumentation/tooltip</property>
+        </condition>
+        <command>set-tooltip</command>
+        <tooltip-id>autoroll</tooltip-id>
+        <label>Roll: %3.0f°</label>
+        <measure-text>Roll: 180</measure-text>
+        <property>autopilot/settings/target-roll-deg</property>
+       </binding>
+     </hovered>
+ </animation>
+ 
+ <animation>
+  <name>Pitch setting</name>
+  <type>slider</type>
+  <object-name>Pitch</object-name>
+  <property>autopilot/settings/target-pitch-deg</property>
+  <factor>-0.002</factor> <!-- 10 deg 0.02 m -->
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+  <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>autopilot/settings/target-pitch-deg</property>
+        <factor>0.5</factor>
+        <min>-10</min>
+        <max>10</max>
+      </binding>
+  </action>
+  <shift-action>
+    <binding>
+      <command>property-assign</command>
+      <property>autopilot/settings/target-pitch-deg</property>
+      <value>0.0</value>
+    </binding>
+   </shift-action>
+  <hovered>
+       <binding>
+        <condition>
+         <property>instrumentation/tooltip</property>
+        </condition>
+        <command>set-tooltip</command>
+        <tooltip-id>autopitch</tooltip-id>
+        <label>Pitch: %3.1f°</label>
+        <measure-text>Roll: 180</measure-text>
+        <property>autopilot/settings/target-pitch-deg</property>
+       </binding>
+     </hovered>
+ </animation>
+
+<animation>
+  <name>Aileron trim</name>
+  <type>knob</type>
+  <object-name>Roll</object-name>
+  <property>/controls/flight/aileron-trim</property>
+  <factor>-360</factor>
+  <center>
+    <x-m>0.01051</x-m>
+    <y-m>0.01008</y-m>
+    <z-m>-0.06592</z-m>
+  </center>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+     <action>
+       <binding>
+         <command>property-adjust</command>
+         <property>/controls/flight/aileron-trim</property>
+         <factor>0.005</factor>
+         <min>-0.1</min>
+         <max>0.1</max>
+      </binding>
+   </action>
+   <shift-action>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/aileron-trim</property>
+      <value>0.0</value>
+    </binding>
+   </shift-action>
+  <hovered>
+       <binding>
+        <condition>
+         <property>instrumentation/tooltip</property>
+        </condition>
+        <command>set-tooltip</command>
+        <tooltip-id>atrim</tooltip-id>
+        <label>Aileron trim: %3d%%</label>
+        <measure-text>Aileron trim: -100%</measure-text>
+        <property>/controls/flight/aileron-trim</property>
+        <mapping>nasal</mapping>
+        <script>
+         return arg[0]*1000;
+        </script>
+       </binding>
+     </hovered>
+ </animation> 
+
+<animation>
+  <name>Rudder trim</name>
+  <type>knob</type>
+  <object-name>Yaw</object-name>
+  <property>/controls/flight/rudder-trim</property>
+  <factor>-360</factor>
+  <center>
+   <x-m>0.009603</x-m>
+   <y-m>0.033739</y-m>
+   <z-m>-0.06558</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+     <action>
+       <binding>
+         <command>property-adjust</command>
+         <property>/controls/flight/rudder-trim</property>
+         <factor>0.005</factor>
+         <min>-0.15</min>
+         <max>0.15</max>
+      </binding>
+   </action>
+   <shift-action>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/rudder-trim</property>
+      <value>0.0</value>
+    </binding>
+   </shift-action>
+  <hovered>
+       <binding>
+        <condition>
+         <property>instrumentation/tooltip</property>
+        </condition>
+        <command>set-tooltip</command>
+        <tooltip-id>rudtrim</tooltip-id>
+        <label>Rudder trim: %3d%%</label>
+        <measure-text>Rudder trim: -100%</measure-text>
+        <property>/controls/flight/rudder-trim</property>
+        <mapping>nasal</mapping>
+        <script>
+         return arg[0]/0.15*100;
+        </script>
+       </binding>
+     </hovered>
+ </animation> 
+  
+<!-- Indicators -->
+ 
+  <animation> 
+  <type>material</type> 
+  <object-name>Altind</object-name>
+  <condition>
+   <greater-than>
+    <property>systems/electrical/outputs/inst_ac</property>
+    <value>40</value>
+   </greater-than>
+  </condition>
+  <emission>
+   <red>1.0</red>
+   <green>1.0</green>
+   <blue>0.8</blue>
+   <factor-prop>autopilot/locks/altitude</factor-prop>
+  </emission>
+ </animation>
+
+  <animation> 
+  <type>material</type> 
+  <object-name>Attind</object-name>
+  <condition>
+   <greater-than>
+    <property>systems/electrical/outputs/inst_ac</property>
+    <value>40</value>
+   </greater-than>
+  </condition>
+  <emission>
+   <red>1.0</red>
+   <green>1.0</green>
+   <blue>0.8</blue>
+   <factor-prop>autopilot/locks/attitude</factor-prop>
+  </emission>
+ </animation>
+ 
+   <animation> 
+  <type>material</type> 
+  <object-name>Dampind</object-name>
+  <condition>
+   <greater-than>
+    <property>systems/electrical/outputs/inst_ac</property>
+    <value>40</value>
+   </greater-than>
+  </condition>
+  <emission>
+   <red>1.0</red>
+   <green>1.0</green>
+   <blue>0.8</blue>
+   <factor-prop>autopilot/locks/damp</factor-prop>
+  </emission>
+ </animation>
+
+  
+</PropertyList>

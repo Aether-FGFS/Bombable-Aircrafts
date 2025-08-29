@@ -1,0 +1,809 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Saab J35F
+
+Original 3D model: Oliver Reischl, oliver.reischl@chello.at
+models, FDM, instruments, systems: Anders Martinsson jandersmartinsson@gmail.com
+************************************************************************
+-->
+
+<PropertyList>
+
+  <sim>
+
+    <description>Saab J35F Draken</description>
+    <long-description>The Saab J35 Draken was a Swedish fighter aircraft manufactured by Saab between 1955 and 1974. The J35 was an effective supersonic Cold War fighter and the first fully supersonic aircraft to be deployed in Western Europe. This is the F-version from the late sixties.</long-description>
+    <author>Anders M</author>
+    <rating>
+      <FDM type="int">3</FDM>
+      <systems type="int">3</systems>
+      <cockpit type="int">4</cockpit>
+      <model type="int">4</model>
+    </rating>
+    <tags>
+      <tag>fighter</tag>
+      <tag>saab</tag>
+      <tag>jet</tag>
+      <tag>supersonic</tag>
+      <tag>ifr</tag>
+      <tag>coldwar</tag>
+      <tag>1960s</tag>
+      <tag>1970s</tag>
+    </tags>
+    <minimum-fg-version>2020.3.0</minimum-fg-version>
+    <aircraft-version>0.9.6</aircraft-version> 
+    <status>beta</status> 
+
+    <flight-model>jsb</flight-model>
+    <aero>DrakenJ35F</aero>
+
+    <previews>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/SaabJ35F-exterior3.jpg</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/SaabJ35F-exterior2.jpg</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/SaabJ35F-exterior.jpg</path>
+      </preview>
+      <preview>
+        <type>cockpit</type>
+        <splash type="bool">true</splash>
+        <path>Previews/SaabJ35F-cockpit.jpg</path>
+      </preview>
+    </previews>
+    
+    <sound>
+      <path>Sounds/sound.xml</path>
+    </sound>
+
+    <virtual-cockpit archive="y">true</virtual-cockpit>
+    <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
+    
+    <view n="0">
+      <internal archive="y">true</internal>
+      <config>
+        <pitch-offset-deg>-9</pitch-offset-deg>
+        <x-offset-m archive="y">0.0</x-offset-m>
+        <y-offset-m archive="y">0.90</y-offset-m>
+        <z-offset-m archive="y">-3.42</z-offset-m>
+      </config>
+    </view>
+
+    <view n="102">
+      <name>Instrument View</name>
+      <type>lookfrom</type>
+      <internal archive="y">true</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <pitch-offset-deg>-23</pitch-offset-deg>
+        <x-offset-m archive="y">0.0</x-offset-m>
+        <y-offset-m archive="y">0.90</y-offset-m>
+        <z-offset-m archive="y">-3.42</z-offset-m>
+      </config>
+    </view>
+        
+    <view n="101">
+      <name>Nav View</name>
+      <type>lookfrom</type>
+      <internal archive="y">true</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <heading-offset-deg>-60</heading-offset-deg>
+        <pitch-offset-deg>-50</pitch-offset-deg>
+        <x-offset-m archive="y">0.0</x-offset-m>
+        <y-offset-m archive="y">0.75</y-offset-m>
+        <z-offset-m archive="y">-3.72</z-offset-m>
+      </config>
+    </view>
+    
+    <view n="100">
+      <name>Radio View</name>
+      <type>lookfrom</type>
+      <internal archive="y">true</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <heading-offset-deg>45</heading-offset-deg>
+        <pitch-offset-deg>-50</pitch-offset-deg>
+        <x-offset-m archive="y">0.0</x-offset-m>
+        <y-offset-m archive="y">0.75</y-offset-m>
+        <z-offset-m archive="y">-3.82</z-offset-m>
+      </config>
+    </view>
+
+    <model>
+      <path>Model/draken.xml</path>
+      <livery>
+          <file type="string">f16green</file>
+      </livery>
+    </model>
+
+    <multiplay>
+      <generic>
+        <int n="0" alias="/fdm/jsbsim/fcs/drag-chute-deployed"/>
+        <int n="10" alias="/ai/submodels/ADEN"/>
+        <bool n="0" alias="/engines/engine[0]/augmentation"/>
+        <bool n="1" alias="/consumables/droptanks"/>
+        <bool n="2" alias="controls/lighting/landing-lightL"/>
+        <bool n="3" alias="controls/lighting/landing-lightR"/>
+        <float n="0" alias="/controls/canopy/position-norm"/>
+        <float n="1" alias="/fdm/jsbsim/aero/alpha-deg"/>
+        <float n="2" alias="/fdm/jsbsim/aero/beta-deg"/>
+      </generic>
+      <target>
+        <dist type="double">0</dist>
+        <course type="double">0</course>
+        <bearing type="double">0</bearing>
+        <alt type="double">0</alt>
+      </target>
+    </multiplay>
+
+    <chase-distance-m>-21</chase-distance-m>
+    
+    <systems>
+      <path>Systems/systems.xml</path>
+      <autopilot>
+        <path>Systems/draken_autopilot.xml</path>
+      </autopilot>
+    </systems>
+
+    <instrumentation>
+      <path>Instruments/draken-instruments.xml</path>
+    </instrumentation>
+
+    <!--
+        <ai>
+        <scenario>refueling_demo</scenario>
+        </ai>
+    -->
+
+    <aircraft-data>
+       <path>/instrumentation/comm[0]/frequencies/selected-mhz</path>
+       <path>/instrumentation/comm[1]/frequencies/selected-mhz</path>
+       <path>/instrumentation/comm[0]/frequencies/standby-mhz</path>
+       <path>/instrumentation/comm[1]/frequencies/standby-mhz</path>
+    </aircraft-data>
+
+    <help>
+      <title>Saab J35F</title>
+      <key>
+        <name>Ctrl+D</name>
+        <desc>Cycle canopy: Locked - Unlocked (opening) - Open - Unlocked (closing). Initially Unlocked (closing).</desc>
+      </key>
+      <key>
+        <name>e</name>
+        <desc>Fire ADEN 30mm cannon (100 rounds available, 1700 rounds per minute)</desc>
+      </key>
+      <key>
+        <name>Shift+J</name>
+        <desc>Jettison Droptanks in flight</desc>
+      </key>
+      <key>
+        <name>Shift+P</name>
+        <desc>Use drag chute handle</desc>
+      </key>
+      <key>
+        <name>Ctrl+A</name>
+        <desc>AP: Altitude hold</desc>
+      </key>
+      <key>
+        <name>Ctrl+T</name>
+        <desc>AP: Attitude hold</desc>
+      </key>
+      <key>
+        <name>Z</name>
+        <desc>Sight: Increased distance</desc>
+      </key>
+      <key>
+        <name>z</name>
+        <desc>Sight: Decreased distance</desc>
+      </key>      
+      <line>Rotate at 270 km/h to 10-12 degrees pitch.  Liftoff at 300 km/h.</line>
+      <line>Extract landing gear below 500 km/h.</line>
+      <line>Approach at 325 km/h.</line>
+      <line>Touchdown at 300 km/h (needs 80-85% RPM).</line>
+      <line>Keep nose up until 240 km/h.</line>
+      <line>Apply brakes.</line>
+      <line>Lower nose at 160 km/h.</line>
+    </help>
+
+    <menubar>
+      <default>
+
+      <menu n="99">
+          <label>Operations</label>
+          <enabled type="bool">true</enabled>
+          <item>
+            <label>Autostart</label>
+            <binding>
+              <command>nasal</command>
+              <script>SaabJ35F.start_systems();</script>
+            </binding>
+          </item>
+          <item>
+            <label>Cabin light</label>
+	          <binding>
+              <command>property-toggle</command>
+	            <property>instrumentation/switches/cabin_light/pos</property>
+            </binding>
+          </item>
+        <item>
+          <label>Fuel Cutoff</label>
+          <binding>
+            <condition>
+              <property>/sim/input/selected/engine[0]</property>
+            </condition>
+            <command>property-toggle</command>
+            <property>/controls/engines/engine[0]/cutoff</property>
+          </binding>
+        </item>
+        <item>
+          <label>Select STRIL target</label>
+          <binding>
+            <command>nasal</command>
+            <script>SaabJ35F.StrilDialog.new(SaabJ35F.verbose);</script>
+          </binding>
+        </item>
+        <item>
+          <label>Toggle droptanks (on ground)</label>
+          <binding>
+            <command>nasal</command>
+            <script>SaabJ35F.drophandle(0);</script>
+          </binding>
+        </item>
+          <item>
+            <label>Reload parachute (on ground)</label>
+            <binding>
+              <command>nasal</command>
+              <script>SaabJ35F.chute_loader();</script>
+           </binding>
+        </item>        
+        </menu>
+        
+        <menu n="100">
+          <label>J-35 Draken</label>
+          <enabled type="bool">true</enabled>
+          <item>
+            <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle();</script>
+            </binding>
+          </item>>
+          <item>
+            <label>Radio frequencies</label>
+            <binding>
+              <command>nasal</command>
+              <script>SaabJ35F.show_radio_dialog();</script>
+            </binding>
+          </item>
+          <item>
+            <label>Navigation beacons</label>
+            <binding>
+              <command>nasal</command>
+              <script>SaabJ35F.show_beacon_dialog();</script>
+            </binding>
+          </item>
+          <item>
+            <label>Heading dialog</label>
+            <binding>
+              <command>nasal</command>
+              <script>SaabJ35F.open_Compass_Dialog();</script>
+            </binding>
+          </item>
+          <item>
+            <label>Toggle Tooltips</label>
+            <binding>
+             <command>property-toggle</command>
+             <property>instrumentation/tooltip</property>
+            </binding>
+            <binding>
+             <command>nasal</command>
+             <script>
+              var txt=["Tooltip off", "Tooltip on"];
+              gui.popupTip(txt[getprop("instrumentation/tooltip")]);
+             </script>
+            </binding>
+          </item>
+          <item>
+            <label>About J35F</label>
+            <binding>
+              <command>nasal</command>
+              <script>SaabJ35F.show_about_dialog();</script>
+            </binding>
+          </item>
+        </menu>
+        
+      </default>
+    </menubar>
+    
+    <rendering>
+      <redout>
+        <enabled type="bool" userarchive="y">true</enabled>
+        <parameters>
+          <blackout-onset-g type="double">5</blackout-onset-g>
+          <blackout-complete-g type="double">9</blackout-complete-g>
+          <onset-blackout-sec type="double">300</onset-blackout-sec>
+          <fast-blackout-sec type="double">10</fast-blackout-sec>
+          <redout-onset-g type="double">-2</redout-onset-g>
+          <redout-complete-g type="double">-4</redout-complete-g>
+          <onset-redout-sec type="double">45</onset-redout-sec>
+          <fast-redout-sec type="double">7.5</fast-redout-sec>
+          <recover-fast-sec type="double">7</recover-fast-sec>
+          <recover-slow-sec type="double">15</recover-slow-sec>
+        </parameters>
+      </redout>
+      <headshake>
+        <enabled type="bool" userarchive="y">true</enabled>
+      </headshake>
+    </rendering>
+    
+    <flight-recorder>
+      <replay-config type="int">0</replay-config>
+      <config n="0" include="Systems/draken_recorder.xml">
+	    <name type="string">Drakens's Flight Recorder</name>
+      </config>
+    </flight-recorder>
+    
+    <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Model/submodels.xml</path>
+    </submodels>
+
+  </sim>
+
+  <input>
+    <keyboard>
+
+      <key n="101">
+        <name>e</name>
+        <desc>Fire ADEN 30mm cannon</desc>
+        <binding>
+          <condition>
+            <property>/systems/electrical/generator_on</property>
+          </condition>
+          <command>property-assign</command>
+          <property>ai/submodels/ADEN</property>
+          <value>1</value>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-assign</command>
+            <property>ai/submodels/ADEN</property>
+            <value>0</value>
+          </binding>
+        </mod-up>
+      </key>
+
+      <key n="90">
+        <name>Z</name>
+        <desc>Sight: Inreased distance</desc>
+        <binding>
+          <command>property-multiply</command>
+          <property>instrumentation/sight/dist_factor</property>
+          <factor>0.95</factor>
+          <min>0.097</min> <!-- 800 m -->
+          <max>0.433</max> <!-- 180 m -->
+          <wrap>false</wrap>
+        </binding>
+      </key>
+
+      <key n="122">
+        <name>z</name>
+        <desc>Sight: Decreased distance</desc>
+        <binding>
+          <command>property-multiply</command>
+          <property>instrumentation/sight/dist_factor</property>
+          <factor>1.052</factor>
+          <min>0.097</min>
+          <max>0.433</max>
+          <wrap>false</wrap>
+        </binding>
+      </key>
+            
+      <key n="80">
+        <name>Shift-P</name>
+        <desc>Deploy drag chute</desc>
+        <binding>
+        <command>nasal</command>
+		  <script>SaabJ35F.chute_handler();</script>
+        </binding>
+      </key>
+
+      <key n="74">
+        <name>Shift-J</name>
+        <desc>Drop droptanks.</desc>
+        <binding>
+          <command>nasal</command>
+          <script>SaabJ35F.drophandle(1);</script>
+        </binding>
+      </key>
+      
+      <key n="4">
+        <name>Ctrl-D</name>
+        <desc>Toggle Canopy</desc>
+        <binding> 
+          <command>nasal</command>
+          <script>SaabJ35F.canopy_operate();</script>
+        </binding>
+      </key>
+
+      <key n="1">
+        <name>Ctrl-A</name>
+        <desc>AP: Altitude hold</desc>
+        <binding> 
+          <command>nasal</command>
+          <script>SaabJ35F.auto_setting("alt");</script>
+        </binding>
+      </key>
+
+      <key n="20">
+        <name>Ctrl-T</name>
+        <desc>AP: Attitude hold</desc>
+        <binding> 
+          <command>nasal</command>
+          <script>SaabJ35F.auto_setting("att");</script>
+        </binding>
+      </key>
+            
+      <key n="103">
+        <name>g</name>
+        <desc>Gear Up</desc>
+        <binding>
+          <command>nasal</command>
+          <script><![CDATA[
+          if (getprop("controls/engines/engine[0]/throttle") > 0.9) controls.gearDown(-1);
+          ]]></script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>controls.gearDown(0)</script>
+          </binding>
+        </mod-up>
+      </key>	
+    </keyboard>
+  </input>
+    
+  <systems>
+      <pitot n="1">
+        <serviceable>1</serviceable>
+      </pitot>
+      <static n="1">
+        <serviceable>1</serviceable>
+      </static>
+   </systems>
+      
+  <limits>
+    <vne type="double">729</vne> 
+    <max-gear-extended-speed type="double">270</max-gear-extended-speed>
+    <max-positive-g type="double">9</max-positive-g>
+    <max-negative-g type="double">-4</max-negative-g>
+    <max-touch-down-fpm type="double">500</max-touch-down-fpm>
+    <max-drop-speed-mach type="double">0.8</max-drop-speed-mach>
+    <max-skin-temp type="double">77</max-skin-temp>
+  </limits>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <name type="string">Forward internal</name>
+        <level-gal_us archive="y">469.0</level-gal_us>
+      </tank>
+      <tank n="1">
+        <name type="string">Left drop tank</name>
+        <level-gal_us archive="y">143.5</level-gal_us>
+      </tank>
+      <tank n="2">
+        <name type="string">Right drop tank</name>
+        <level-gal_us archive="y">143.5</level-gal_us>
+      </tank>
+      <tank n="3">
+        <name type="string">Aft internal</name>
+        <level-gal_us archive="y">469.0</level-gal_us>
+      </tank>
+      <tank n="4">
+        <name type="string">Collector tank Forward+Left</name>
+        <hidden type="bool">1</hidden>
+      </tank>
+      <tank n="5">
+        <name type="string">Collector tank Aft+Right</name>
+        <hidden type="bool">1</hidden>
+      </tank>
+      <using-droptanks type ="bool">false</using-droptanks>
+      <pressure-fail type="bool">false</pressure-fail>
+    </fuel>
+    <droptanks type="bool">true</droptanks>
+  </consumables>
+
+
+  <controls>
+    <!-- Start with Parking Brake on -->
+    <gear>
+      <brake-parking type="double">1.0</brake-parking>
+    </gear>
+    <canopy>
+      <control type="bool">false</control>
+      <deice type="int">0</deice>
+    </canopy>
+    <electric>
+      <battery-switch>false</battery-switch>
+    </electric>
+    <lighting>
+      <landing-lightL type="bool">false</landing-lightL>
+      <landing-lightR type="bool">false</landing-lightR>
+      <cabin-light type="bool">false</cabin-light>
+      <consol-norm type="double">0.0</consol-norm>
+      <indicator-norm type="double">0.0</indicator-norm>
+      <nav-lights type="bool">false</nav-lights>
+      <nav-lights-int type="double">0</nav-lights-int>
+    </lighting>
+    <radar>
+      <mode type="int" archive="y">0</mode>
+      <radar_cross_light type="double">0.0</radar_cross_light>
+      <radar_skope_light type="double">0.0</radar_skope_light> 
+    </radar>
+    <navradio>
+      <mode type="int" archive="y">0</mode>
+    </navradio>
+    <iff>
+      <pwr type="bool">0</pwr>
+    </iff>   
+    <dragchute>
+      <chute-lever type="bool">false</chute-lever>
+      <chute-cap type="bool">false</chute-cap>
+    </dragchute>
+    <armament>
+      <selected type="int">0</selected>
+    </armament>
+  </controls>
+
+
+  <engines>
+    <engine n="0">
+      <running>false</running>
+      <RAT-angle-norm type="double">0</RAT-angle-norm>
+    </engine>
+  </engines>
+
+
+  <!-- Target in meters -->
+  <autopilot>
+    <enabled type="bool">true</enabled>
+    <on type="bool">false</on>
+    <altoff type="bool">false</altoff>
+    <settings>
+      <target-altitude-m type="double">300</target-altitude-m>
+      <plane type="bool">false</plane>
+    </settings>
+    <locks>
+      <altitude type="bool">false</altitude>
+      <attitude type="bool">false</attitude>
+      <damp type="bool">true</damp>
+      <!--autosteer type="bool">false</autosteer> < Cheat to steer down the runway -->
+    </locks>
+  </autopilot>
+
+  
+  <instrumentation>
+    <airspeed-indicator n="1">
+      <serviceable>1</serviceable>
+    </airspeed-indicator>
+    <altimeter n="1">
+      <serviceable>1</serviceable>
+    </altimeter>
+    <AHK>
+      <mode type="int">0</mode>
+      <needle_target type="double">0</needle_target>
+      <needle_dist type="double">0</needle_dist>
+    </AHK>
+    <navradio>
+      <mode type="int" archive="y">0</mode> 
+      <anita1 type="int" archive="y">0</anita1>
+      <anita2 type="int" archive="y">0</anita2>
+      <barbro type="int" archive="y">0</barbro>
+      <head type="double">0</head>
+      <dir type="double">0</dir>
+      <dis type="double">0</dis>
+      <gs_alt type="double">0</gs_alt>
+      <gs_dir type="double">0</gs_dir>
+      <plane_alt type="double">0</plane_alt>
+      <stril-target type="string">Route</stril-target>
+    </navradio>
+    <fr21>
+      <pwr type="bool">false</pwr>
+      <mode type="bool">false</mode> <!-- false=normal true=reserv -->
+      <frequency_A type="double">100.0</frequency_A>
+      <frequency_B type="double">100.0</frequency_B>
+      <frequency_A_man type="double" archive="y">100.0</frequency_A_man>
+      <frequency_B_man type="double" archive="y">100.0</frequency_B_man>
+      <buttons>
+        <A type="bool">true</A>
+        <B type="bool">false</B>
+        <C type="bool">false</C>
+        <D type="bool">false</D>
+        <E type="bool">false</E>
+        <F type="bool">false</F>
+        <G type="bool">false</G>
+        <H type="bool">false</H>
+        <I type="bool">false</I>
+        <J type="bool">false</J>
+        <K type="bool">false</K>
+        <Uslash type="bool">false</Uslash>
+        <b1 type="bool">true</b1>
+        <b2 type="bool">false</b2>
+        <b3 type="bool">false</b3>
+        <b4 type="bool">false</b4>
+        <b5 type="bool">false</b5>
+        <Lslash type="bool">false</Lslash>
+      </buttons>
+      <transmit type="bool">false</transmit>
+    </fr21>
+    <iff> 
+      <pwr type="int">0</pwr>
+      <on type="bool">false</on>
+      <crypt type="int">1</crypt>
+      <indicator type="bool">false</indicator>
+      <test type="int">0</test>
+      <channel_prop type="string">/instrumentation/iff/crypt</channel_prop>
+      <power_prop type="string">/instrumentation/iff/on</power_prop>
+    </iff>  
+    <radar>
+      <mode_select type="int">0</mode_select>
+      <scan_mode type="float">120</scan_mode>
+      <antenna_pitch type="float">0</antenna_pitch>
+      <antenna_yaw type="float">0</antenna_yaw>
+      <radar_cross_light type="double">0.75</radar_cross_light>
+      <radar_skope_light type="double">0.75</radar_skope_light> 
+    </radar>
+    <gear_warning type="bool">false</gear_warning>
+    <alt_indicator type="bool">false</alt_indicator>
+    <master_alarm>
+      <on type="bool">false</on>
+      <acknow type="bool">false</acknow>
+    </master_alarm>
+    <fuel>
+      <needleF_rot type="double">0</needleF_rot>
+      <needleB_rot type="double">0</needleB_rot>
+      <FT_light type="bool">false</FT_light>
+      <LT_light type="bool">false</LT_light>
+    </fuel>
+    <!-- 0=no drag chute, 1=loaded, 2=deployed, 3=dropped -->
+    <chute_state type="int">1</chute_state>
+    <nav-lights type="bool">false</nav-lights>
+    <stall-warn-limit type="double">15</stall-warn-limit>
+    <switches>
+      <drop_selector>
+        <pos type="bool">false</pos>
+        <label type="string">Droptank fuel valve</label>
+      </drop_selector>
+      <cabin_light>
+        <pos type="bool">false</pos>
+        <label type="string">Cabin light</label>
+      </cabin_light>
+      <canopy-deice>
+        <pos type="int">0</pos>
+        <label type="string">Canopy deice</label>
+      </canopy-deice>
+      <battery_cover>
+        <pos type="bool">false</pos>
+      </battery_cover>
+      <fuel_cover>
+        <pos type="bool">false</pos>
+      </fuel_cover>
+      <fuel>
+        <pos type="bool">false</pos>
+      </fuel>
+      <generator>
+        <pos type="int">0</pos>
+      </generator>
+      <start>
+        <pos type="bool">false</pos>
+      </start>
+      <restart>
+        <pos type="bool">false</pos>
+      </restart>
+      <inst-light-knob>
+        <pos type="double" archive="y">0.10</pos>
+      </inst-light-knob>
+      <indicator-light-knob>
+        <pos type="double" archive="y">1.0</pos>
+      </indicator-light-knob>
+      <consol-light-knob>
+        <pos type="double" archive="y">0.0</pos>
+      </consol-light-knob>
+      <landing-light-left>
+        <pos type="bool">false</pos>
+        <label type="string">L Land light</label>
+      </landing-light-left>
+      <landing-light-right>
+        <pos type="bool">false</pos>
+        <label type="string">R Land light</label>
+      </landing-light-right>
+      <nav-lights>
+       <pos type="int">0</pos>
+       <label type="string">Nav light</label>
+      </nav-lights>
+      <stall-warn-setting>
+        <pos>0</pos>
+      </stall-warn-setting>
+      <strobe type="bool">false</strobe>
+      <default>
+        <pos type="bool">false</pos>
+        <label type="string">Default</label>
+      </default>
+      <on>
+        <pos type="bool">true</pos>
+      </on>
+      <sound-large type="bool">false</sound-large>
+      <sound-small type="bool">false</sound-small>
+    </switches>
+    <hydraulic>
+      <hydI-fail type="bool">true</hydI-fail>
+      <hydII-fail type="bool">true</hydII-fail>
+    </hydraulic>
+    <clock>
+      <ring-pos type="double">0</ring-pos>
+      <hour-hand-pos type="double">0</hour-hand-pos>
+      <min-hand-pos type="double">0</min-hand-pos>
+      <sec-hand-pos type="double">0</sec-hand-pos>
+      <tenth-hand-pos type="double">0</tenth-hand-pos>
+      <clk-mode type="bool">false</clk-mode>
+      <stopw-pressed type="bool">false</stopw-pressed>
+    </clock>
+    <sight>
+      <wingspan type="double">10</wingspan>
+      <brightness type="double">1</brightness>
+      <dist_factor type="double">0.195</dist_factor> <!-- diameter cm 1 m wsp. 400 m 78 cm dist HUD-eye-->
+    </sight>
+    <armament>
+      <selected type="int">0</selected> <!-- 0 none, 1 AKAN -->
+    </armament>
+    <tooltip type="bool" archive="y">true</tooltip>
+  </instrumentation>
+
+  <rendering>
+    <nav-lights-factor type="float">0</nav-lights-factor>
+    <lights-factor type="float">0</lights-factor>
+    <submodels>
+      <dropL type="bool">false</dropL>
+      <dropR type="bool">false</dropR>
+    </submodels>
+  </rendering>
+
+  <nasal>
+    <SaabJ35F>
+      <verbose type="int">1</verbose>
+      <file>Nasal/draken_common.nas</file>
+      <file>Nasal/draken_limits.nas</file>
+      <file>Avionics/draken_AHK.nas</file>
+      <file>Avionics/draken_pn59.nas</file>
+      <file>Avionics/draken_fr21.nas</file>
+      <file>Avionics/draken_caution.nas</file>
+      <file>Avionics/draken_iff.nas</file>
+      <file>Avionics/iff.nas</file>
+      <file>Instruments/Clock/draken_clock.nas</file>
+      <file>Nasal/draken_handlers.nas</file> 
+      <file>Nasal/draken_dialogs.nas</file>
+      <file>Systems/draken_electric.nas</file>
+      <file>Radar/draken_radar.nas</file>
+      <file>Nasal/draken_sights.nas</file>
+      <file>Nasal/draken_temperature.nas</file>
+      <file>Nasal/draken_autostart.nas</file>
+      <file>Nasal/draken_stril.nas</file>
+      <file>Nasal/draken_init.nas</file>
+    </SaabJ35F>
+  </nasal>
+
+</PropertyList>

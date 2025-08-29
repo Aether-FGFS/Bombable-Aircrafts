@@ -1,0 +1,22 @@
+#A and 1 are set from 
+#Start frequencies COM1 and COM2
+#Do not change the order or 
+#remove any lines below
+#You can change the frequencies
+#associated with the buttons
+#and add descriptions.
+B,125.95,Vasteras (ESOW) Con
+C,134.20,Sockholm TCA
+D,130.40,Uppsala (ESKC) Apr
+E,100.00
+F,100.00
+G,100.00
+H,100.00
+I,100.00
+J,100.00
+K,100.00
+b2,119.20,Uppsala (ESKC) Twr
+b3,130.15,Kiruna (ESNQ) Twr
+b4,119.00,Vasteras (ESOW) Twr
+b5,100.00
+
