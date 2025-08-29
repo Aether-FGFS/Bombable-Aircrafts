@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>clock.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10</max-m>
+ </animation>
+ 
+<animation>
+ <type>material</type> 
+ <object-name>MinuteHand</object-name>
+ <object-name>SecondHand</object-name>
+ <object-name>HourHand</object-name>
+ <object-name>Face</object-name>
+ <object-name>Ring</object-name>
+ <emission>	
+  <red>1</red>	
+  <green>0.3</green>	
+  <blue>0.3</blue>
+  <factor-prop>controls/lighting/instruments-norm</factor-prop>
+ </emission>
+</animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>TenthHand</object-name>
+  <property>instrumentation/clock/tenth-hand-pos</property>
+  <factor>36</factor>
+  <center>
+    <x-m>-0.0003</x-m>
+    <y-m>0.009082</y-m>
+    <z-m>0.000893</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>SecondHand</object-name>
+  <property>instrumentation/clock/sec-hand-pos</property>
+  <factor>6</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>MinuteHand</object-name>
+  <property>instrumentation/clock/min-hand-pos</property>
+  <factor>6</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>HourHand</object-name>
+  <property>instrumentation/clock/hour-hand-pos</property>
+  <factor>30</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Ring</object-name>
+  <property>instrumentation/clock/ring-pos</property>
+  <factor>1</factor>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+    <name>ClockRingKnob</name>
+        <type>knob</type>
+        <object-name>clk_ring_knob</object-name>
+        <property>instrumentation/clock/ring-pos</property>
+        <factor>2</factor>
+    <center>
+      <x-m>-0.002902</x-m>
+      <y-m>0.046993</y-m>
+      <z-m>-0.026838</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0.0</y>
+     <z>0.0</z>
+    </axis>
+    <action>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/clock/ring-pos</property>
+      <factor>-2</factor>
+      <min>0</min>
+      <max>360</max>                
+      <wrap>true</wrap>
+    </binding>
+    </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>clkring</tooltip-id>
+      <label>Clock ring: %d</label>
+      <measure-text>Clock ring: 60</measure-text>
+      <property>instrumentation/clock/ring-pos</property>
+      <mapping>nasal</mapping>
+      <script>
+       var t=60-arg[0]/6;
+       return (t==60) ? 0:t;
+      </script>
+     </binding>
+   </hovered>
+ </animation>
+ 
+<animation>
+    <name>Clockmodeknob</name>
+        <type>slider</type>
+        <object-name>clk_mode_knob</object-name>
+        <property>instrumentation/clock/clk-mode</property>
+        <factor>0.005</factor>
+    <center>
+      <x-m>-0.002902</x-m>
+      <y-m>0.019523</y-m>
+      <z-m>-0.032977</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0.0</y>
+     <z>0.0</z>
+    </axis>
+    <action>
+    <binding>
+      <command>property-toggle</command>
+      <property>instrumentation/clock/clk-mode</property>
+    </binding>
+    </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>clkmode</tooltip-id>
+      <label>Clock mode: %s</label>
+      <measure-text>Clock mode: Clocj</measure-text>
+      <property>instrumentation/clock/clk-mode</property>
+      <mapping>nasal</mapping>
+      <script>
+       var t=["Clock", "Stopw."];
+       return t[arg[0]];
+      </script>
+     </binding>
+   </hovered>
+ </animation>
+
+<animation>
+    <name>stopwknob</name>
+        <type>slider</type>
+        <object-name>timer_knob</object-name>
+        <property>instrumentation/clock/stopw-pressed</property>
+        <factor>0.005</factor>
+    <center>
+      <x-m>-0.002902</x-m>
+      <y-m>0.031968</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0.0</y>
+     <z>0.0</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-assign</command>
+        <property>instrumentation/clock/stopw-pressed</property>
+        <value>true</value>
+      </binding>
+
+    </action>
+    <release>
+      <binding>
+        <command>property-assign</command>
+        <property>instrumentation/clock/stopw-pressed</property>
+        <value>false</value>
+      </binding>
+    </release>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>stopw</tooltip-id>
+      <label>Stopw. start/stop/res.</label>
+     </binding>
+   </hovered>
+ </animation>
+ 
+</PropertyList>

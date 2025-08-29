@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <path>cabpress.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10</max-m>
+ </animation>
+ 
+<animation>
+ <type>material</type> 
+ <object-name>Face</object-name>
+ <object-name>Needle</object-name>
+ <emission>	
+  <red>1</red>	
+  <green>0.3</green>	
+  <blue>0.3</blue>
+  <factor-prop>controls/lighting/instruments-norm</factor-prop>
+ </emission>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>Needle</object-name>
+  <condition>
+   <greater-than>
+    <property>systems/electrical/outputs/battery</property>
+    <value>20</value>
+   </greater-than>
+  </condition>
+  <!-- TODO pressure control -->
+  <expression>
+    <clip>
+      <clipMin>0</clipMin>
+      <clipMax>170</clipMax>
+      <product>
+        <difference>
+          <property>/instrumentation/altimeter/pressure-alt-ft</property>
+          <value>10000</value>
+        </difference>
+        <value>0.0154</value> <!-- Max 0.25 kp/cm2 diff over 3000 m, 170 deg needle-->
+      </product>
+    </clip>
+  </expression>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0.0007</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+</animation>
+
+</PropertyList>

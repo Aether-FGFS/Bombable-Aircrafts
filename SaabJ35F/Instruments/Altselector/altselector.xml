@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>altselect.ac</path>
+ 
+ <animation>
+  <type>material</type> 
+  <object-name>D10000</object-name>
+  <object-name>D1000</object-name>
+  <object-name>D100</object-name>
+  <object-name>D10</object-name>
+  <object-name>D1</object-name>
+  <emission>	
+   <red>1</red>	
+   <green>0.3</green>	
+   <blue>0.3</blue>
+   <factor-prop>controls/lighting/instruments-norm</factor-prop>
+  </emission>
+ </animation>
+
+    <!-- Altitude Display -->
+    
+    <animation>
+        <type>textranslate</type>
+        <object-name>D10000</object-name>
+        <property>/autopilot/settings/target-altitude-m</property>
+        <factor>0.00001</factor>
+        <step>10000</step>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>textranslate</type>
+        <object-name>D1000</object-name>
+        <property>/autopilot/settings/target-altitude-m</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>D100</object-name>
+        <property>/autopilot/settings/target-altitude-m</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>D10</object-name>
+        <property>/autopilot/settings/target-altitude-m</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>D1</object-name>
+        <property>/autopilot/settings/target-altitude-m</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+
+  <animation>
+      <type>select</type>
+      <object-name>Plane</object-name>
+      <condition>
+          <property>/autopilot/settings/plane</property>
+      </condition>
+  </animation>
+
+  <animation>
+      <type>translate</type>
+      <object-name>Knob</object-name>
+      <object-name>Knob_plane</object-name>
+        <property>/autopilot/settings/plane</property>
+        <factor>0.005</factor>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+  </animation>
+  
+  <!--             Altimeter setting       -->  
+  <animation>
+        <type>knob</type>
+        <object-name>Knob</object-name>
+        <property>/autopilot/settings/target-altitude-m</property>
+        <factor>0.5</factor>
+        <condition>
+          <not>
+            <property>/autopilot/settings/plane</property>
+         </not>
+        </condition>
+        <center>
+            <x-m>0.01175</x-m>
+            <y-m>0.0331</y-m>
+            <z-m>0.0</z-m>
+        </center>
+        <axis>
+          <x>1</x>
+          <y>0</y>
+          <z>0</z>
+        </axis>
+
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/autopilot/settings/target-altitude-m</property>
+                <factor>10</factor>
+                <min>300</min>
+                <max>18000</max>                
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        
+        <shift-action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/autopilot/settings/target-altitude-m</property>
+                <factor>500</factor>
+                <min>300</min>
+                <max>18000</max>                
+                <wrap>false</wrap>
+            </binding>
+        </shift-action>
+        
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>altselect</tooltip-id>
+      <label>Altitude selector</label>
+     </binding>
+   </hovered>
+    </animation>
+
+<!-- Set Plane -->
+    
+    <animation>
+        <type>pick</type>
+        <object-name>Knob_plane</object-name>
+       <action>
+            <button>0</button>
+            <binding>
+                <command>property-toggle</command>
+                <property>/autopilot/settings/plane</property>
+            </binding>
+       </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>plane</tooltip-id>
+      <label>Set Plané</label>
+     </binding>
+   </hovered>
+   </animation>
+        
+
+</PropertyList>
+
