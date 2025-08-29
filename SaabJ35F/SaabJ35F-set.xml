@@ -132,7 +132,7 @@ models, FDM, instruments, systems: Anders Martinsson jandersmartinsson@gmail.com
     <multiplay>
       <generic>
         <int n="0" alias="/fdm/jsbsim/fcs/drag-chute-deployed"/>
-        <int n="10" alias="/ai/submodels/ADEN"/>
+        <!-- <int n="10" alias="/ai/submodels/ADEN"/>  -->
         <bool n="0" alias="/engines/engine[0]/augmentation"/>
         <bool n="1" alias="/consumables/droptanks"/>
         <bool n="2" alias="controls/lighting/landing-lightL"/>
@@ -140,6 +140,8 @@ models, FDM, instruments, systems: Anders Martinsson jandersmartinsson@gmail.com
         <float n="0" alias="/controls/canopy/position-norm"/>
         <float n="1" alias="/fdm/jsbsim/aero/alpha-deg"/>
         <float n="2" alias="/fdm/jsbsim/aero/beta-deg"/>
+        <string n="9" type="string"/>
+        <int n="10" alias="controls/armament/trigger" />
       </generic>
       <target>
         <dist type="double">0</dist>
