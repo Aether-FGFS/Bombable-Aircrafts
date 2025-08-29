@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="347"
+   height="344"
+   viewBox="0 0 91.810716 91.016724"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="test.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.2218217"
+     inkscape:cx="199.29257"
+     inkscape:cy="236.12282"
+     inkscape:window-width="1850"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     units="px"
+     width="793.70081px"
+     inkscape:snap-global="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Lager 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <image
+       width="90.663887"
+       height="90.311111"
+       preserveAspectRatio="none"
+       xlink:href="compassbg.png"
+       id="face"
+       x="0.56975913"
+       y="0.43463948"
+       inkscape:svg-dpi="1" />
+    <g
+       id="pointer"
+       style="display:inline">
+      <rect
+         style="fill:#ffffff;stroke:#ffffff;stroke-width:1"
+         id="rect1199"
+         width="7.0801349"
+         height="8.7270908"
+         x="41.872707"
+         y="26.556732" />
+      <g
+         id="g1320"
+         transform="translate(0.89321691)">
+        <path
+           style="fill:#ffffff;stroke:#ffffff;stroke-width:1"
+           d="m 39.507493,35.63233 c 0,37.90706 0.02961,37.613536 0.02961,37.613536"
+           id="path1234" />
+        <path
+           style="fill:#ffffff;stroke:#ffffff;stroke-width:1"
+           d="m 49.50258,35.63233 c 0,37.90706 0.02961,37.613536 0.02961,37.613536"
+           id="path1236" />
+      </g>
+      <path
+         style="fill:#ffffff;stroke:#ffffff;stroke-width:1.20115"
+         d="M 45.412774,26.17185 V 14.616933"
+         id="path1355" />
+    </g>
+    <g
+       id="course">
+      <path
+         style="fill:#ffffff;stroke:#ffffff;stroke-width:1.0235"
+         d="M 45.354314,76.317309 V 15.021271"
+         id="path1557" />
+      <rect
+         style="fill:#ffffff;stroke:#ffffff;stroke-width:1.0235"
+         id="rect1581"
+         width="7.1909475"
+         height="6.3127661"
+         x="41.758839"
+         y="19.739895" />
+    </g>
+  </g>
+</svg>

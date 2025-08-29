@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <path>radar.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>20</max-m>
+ </animation>
+ 
+ <animation>
+  <type>material</type> 
+  <object-name>Screen</object-name>
+  <emission>	
+   <red>0.05</red>	
+   <green>0.05</green>	
+   <blue>0.05</blue>
+   <factor-prop>controls/radar/radar_skope_light</factor-prop>
+  </emission>
+ </animation>
+ 
+</PropertyList>

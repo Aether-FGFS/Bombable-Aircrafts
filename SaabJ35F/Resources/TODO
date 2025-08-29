@@ -1,0 +1,34 @@
+TODO
+
+Improvements:
+* Servostall. Separate upper and lower Speed brakes.
+* Stallwarning system improved https://www.aef.se/Avionik/Notiser/Stallvarning_SVS-35_Notis_2.htm
+* Flight and ground idle.
+* AB lightup at altitude: 2-27 Avilog
+* More detailed seat
+* Adjust autopilot for better response and stability
+* Sounds: drag chute buzzer?
+* Improve textures eg. screws, markings (fire)
+* Tweek FDM. Eg. Is it too unstable in roll?
+* Attitude indicator electric, Heading indicator electric: https://sourceforge.net/p/flightgear/flightgear/ci/db6954dd17ca024d6521ddb663977f3faab434c7/log/?path=/src/Instrumentation/attitude_indicator_electric.hxx
+* Engine restart improved engine system
+* fuel pump and pressure droptanks? https://www.bookmark.se/bmfs/docs-50/html/x_procedures.html#x_proc_starting
+* Beacons and radio frequences interactive dialogs
+* Radar more controls and functions
+* Does J35F have strobe or not? Some docs show strobe-switch and some don't
+* More cockpit switches/knobs: de-icing engine etc
+* Battery sim in electric system.
+* Master gyro to main AI
+* Start fuel limit
+* Caging button AI (no AP if caged)
+* STRIL 60 navigation and landing pattern
+* Hydraulics - gears and brakes, cabin pressure system.
+* Engine air restart and emergency generator
+* High temp warning fuselage 77 degrees indicator?
+* Faults, fire
+* More weapons
+* Sunscreen sight?
+* contrail https://sourceforge.net/p/flightgear/fgdata/ci/next/tree/Nasal/contrail.nas
+* change settimer to maketimer
+
+And much more...
