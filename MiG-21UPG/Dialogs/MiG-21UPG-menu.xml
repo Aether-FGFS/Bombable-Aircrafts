@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="11">
+      <label>MiG-21 Bison</label>
+      <enabled type="bool">true</enabled>
+
+      <item n="0">
+        <label>Fast Config</label>
+        <name>config</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>config</dialog-name>
+        </binding>
+      </item>
+
+      <item n="1">
+        <label>ARC channel set up</label>
+        <name>ARK-19</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>ARK-19</dialog-name>
+        </binding>
+      </item>
+
+      <item n="2">
+        <label>PRMG channel set up</label>
+        <name>PRMG</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>PRMG</dialog-name>
+        </binding>
+      </item>
+      
+      <item n="3">
+        <label>RSBN channel set up</label>
+        <name>RSBN</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>RSBN</dialog-name>
+        </binding>
+      </item>
+
+    </menu>
+  </default>
+
+</PropertyList>
