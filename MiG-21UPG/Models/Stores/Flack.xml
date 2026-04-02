@@ -1,0 +1,14 @@
+<PropertyList>
+
+    <path>Flack.ac</path>
+
+    <animation>
+        <type>billboard</type>
+        <spherical>true</spherical>
+    </animation>
+
+    <sound>
+      <path>Aircraft/MiG-21UPG/Models/Stores/guns-sound.xml</path>
+    </sound>
+
+</PropertyList>
