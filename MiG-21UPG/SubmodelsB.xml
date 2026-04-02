@@ -1,0 +1,1166 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<!-- GSh-23-gun -->
+	
+
+<!-- cannon bullets -->
+  <Cannon>
+    <model>Aircraft/MiG-21UPG/Models/Effects/Gun/blank.xml</model>
+    <speed>2350</speed>
+    <cd>0.25</cd>
+    <weight>0.3968</weight>
+    <eda>0.006763</eda>
+    <fuse-range>0</fuse-range>
+    <life>5.0</life>
+    <trigger>/controls/armament/trigger-GSh-23</trigger>
+    <!--<expiry>true</expiry>-->
+    <repeat>true</repeat>
+    <count>-1</count>
+    <wind>false</wind>
+    <collision>true</collision> <!-- Collision with models -->
+    <impact>true</impact> <!-- Ground impact  -->
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Gun/Bullet-Submodel.xml</submodel-path>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact-reports>sim/ai/aircraft/impact/bullet</impact-reports>
+    <!--<x-offset> 10.25912073 </x-offset>
+    <y-offset> -0.1130577428 </y-offset>
+    <z-offset> -1.5226378 </z-offset>-->
+    <pitch-offset>0</pitch-offset>
+  </Cannon>
+  
+  <CannonTracer>
+    <model>Aircraft/MiG-21UPG/Models/Effects/Gun/Tracer.xml</model>
+    <speed>2350</speed>
+    <cd>0.25</cd>
+    <weight>0.3968</weight>
+    <eda>0.006763</eda>
+    <fuse-range>0</fuse-range>
+    <life>5.0</life>
+    <trigger>/controls/armament/trigger-GSh-23</trigger>
+    <!--<expiry>true</expiry>-->
+    <repeat>true</repeat>
+    <count>-1</count>
+    <wind>false</wind>
+    <collision>true</collision>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Stores/Bullet-Submodel.xml</submodel-path>
+    <!--<x-offset> 10.25912073 </x-offset>
+    <y-offset> -0.1130577428 </y-offset>
+    <z-offset> -1.5226378 </z-offset>-->
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+  </CannonTracer>
+  
+  <submodel>
+    <name>GSh-23 bullets R</name>
+    <model alias="../../Cannon/model"/>
+    <trigger>/controls/armament/trigger-GSh-23</trigger>
+    <speed alias="../../Cannon/speed"/>
+    <cd alias="../../Cannon/cd"/>
+    <eda alias="../../Cannon/eda"/>
+    <fuse-range alias="../../Cannon/fuse-range"/>
+    <weight alias="../../Cannon/weight"/>
+    <life alias="../../Cannon/life"/>
+    <repeat alias="../../Cannon/repeat"/>
+    <delay>0.017</delay>
+    <count alias="../../Cannon/count"/>
+    <wind alias="../../Cannon/wind"/>
+    <expiry alias="../../Cannon/expiry"/>
+    <collision alias="../../Cannon/collision"/>
+    <impact alias="../../Cannon/impact"/>
+    <impact-reports alias="../../Cannon/impact-reports"/>
+    <submodel-path alias="../../Cannon/submodel-path"/>
+    <x-offset> 10.25912073 </x-offset> 
+    <y-offset>  0.1130577428 </y-offset> 
+    <z-offset> -1.5226378 </z-offset> 
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset alias="../../Cannon/pitch-offset"/>
+  </submodel>
+
+  <submodel>
+    <name>GSh-23 tracer R</name>
+    <model alias="../../CannonTracer/model"/>
+    <trigger>/controls/armament/trigger-GSh-23</trigger>
+    <speed alias="../../CannonTracer/speed"/>
+    <cd alias="../../CannonTracer/cd"/>
+    <eda alias="../../CannonTracer/eda"/>
+    <fuse-range alias="../../CannonTracer/fuse-range"/>
+    <weight alias="../../CannonTracer/weight"/>
+    <life alias="../../CannonTracer/life"/>
+    <repeat alias="../../CannonTracer/repeat"/>
+    <delay>0.085</delay> <!-- tracer once every 5 rounds -->
+    <count alias="../../CannonTracer/count"/>
+    <wind alias="../../CannonTracer/wind"/>
+    <expiry alias="../../CannonTracer/expiry"/>
+    <collision alias="../../CannonTracer/collision"/>
+    <impact alias="../../CannonTracer/impact"/>
+    <submodel-path alias="../../CannonTracer/submodel-path"/>
+    <x-offset> 10.25912073 </x-offset>
+    <y-offset>  0.1130577428 </y-offset>
+    <z-offset> -1.5226378 </z-offset> 
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset alias="../../CannonTracer/pitch-offset"/>
+  </submodel>
+
+  <submodel>
+    <name>GSh-23 bullets L</name>
+    <model alias="../../Cannon/model"/>
+    <trigger>/controls/armament/trigger-GSh-23</trigger>
+    <speed alias="../../Cannon/speed"/>
+    <cd alias="../../Cannon/cd"/>
+    <eda alias="../../Cannon/eda"/>
+    <fuse-range alias="../../Cannon/fuse-range"/>
+    <weight alias="../../Cannon/weight"/>
+    <life alias="../../Cannon/life"/>
+    <repeat alias="../../Cannon/repeat"/>
+    <delay>0.017</delay>
+    <count alias="../../Cannon/count"/>
+    <wind alias="../../Cannon/wind"/>
+    <expiry alias="../../Cannon/expiry"/>
+    <collision alias="../../Cannon/collision"/>
+    <impact alias="../../Cannon/impact"/>
+    <impact-reports alias="../../Cannon/impact-reports"/>
+    <submodel-path alias="../../Cannon/submodel-path"/>
+    <x-offset> 10.25912073 </x-offset>
+    <y-offset>  -0.1130577428 </y-offset>
+    <z-offset> -1.5226378 </z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset alias="../../Cannon/pitch-offset"/>
+  </submodel>
+
+  <submodel>
+    <name>GSh-23 tracer L</name>
+    <model alias="../../CannonTracer/model"/>
+    <trigger>/controls/armament/trigger-GSh-23</trigger>
+    <speed alias="../../CannonTracer/speed"/>
+    <cd alias="../../CannonTracer/cd"/>
+    <eda alias="../../CannonTracer/eda"/>
+    <fuse-range alias="../../CannonTracer/fuse-range"/>
+    <weight alias="../../CannonTracer/weight"/>
+    <life alias="../../CannonTracer/life"/>
+    <repeat alias="../../CannonTracer/repeat"/>
+    <delay>0.085</delay>
+    <!-- tracer once every 5 rounds -->
+    <count alias="../../CannonTracer/count"/>
+    <wind alias="../../CannonTracer/wind"/>
+    <expiry alias="../../CannonTracer/expiry"/>
+    <collision alias="../../CannonTracer/collision"/>
+    <impact alias="../../CannonTracer/impact"/>
+    <submodel-path alias="../../CannonTracer/submodel-path"/>
+    <x-offset> 10.25912073 </x-offset>
+    <y-offset>  -0.1130577428 </y-offset>
+    <z-offset> -1.5226378 </z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset alias="../../CannonTracer/pitch-offset"/>
+  </submodel>
+	
+	<!-- UB-32-rocket-pods -->
+
+  <!--info on S-5 and S-8 http://militaryrussia.ru/blog/topic-50.html -->
+
+  <submodel>
+    <name>S-5L1 rocket</name>
+    <!--<model>Aircraft/MiG-21UPG/Models/Stores/Rocket.xml</model>-->
+    <model>Aircraft/MiG-21UPG/Models/Stores/S-5/s-5-sub.xml</model>
+    <trigger>controls/armament/trigger-UB32-1-L</trigger>
+    <speed>2000</speed>
+    <repeat>true</repeat>
+    <delay>0.15</delay>
+    <count>-1</count>
+    <x-offset>10.3773</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-1.46325</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <no-roll>true</no-roll>
+    <life>120</life>
+    <wind>false</wind>
+    <weight>120</weight>
+    <cd>0.075</cd>
+    <eda>0.01051198</eda>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>S-5L1-blank</name>
+    <model>Aircraft/MiG-21UPG/Models/Effects/S-5/rocket_blank.xml</model>
+    <trigger>controls/armament/trigger-UB32-1-L</trigger>
+    <speed>2000</speed>
+    <repeat>true</repeat>
+    <delay>0.151</delay>
+    <count>-1</count>
+    <x-offset>10.3773</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-1.46325</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <no-roll>true</no-roll>
+    <life>0.6</life>
+    <wind>false</wind>
+    <weight>120</weight>
+    <cd>0.075</cd>
+    <eda>0.01051198</eda>
+    <collision>false</collision>
+    <!--<collision-report>sim/ai/aircraft/collision/gun</collision-report>-->
+    <impact>false</impact>
+    <!--<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>-->
+  </submodel>
+
+	<submodel>
+		<name>S-5L3</name>
+		<!--<model>Aircraft/MiG-21UPG/Models/Stores/Rocket.xml</model>-->
+    <model>Aircraft/MiG-21UPG/Models/Stores/S-5/s-5-sub.xml</model>
+		<trigger>controls/armament/trigger-UB32-3-L</trigger>
+		<speed>2000</speed>
+		<repeat>true</repeat>
+		<delay>0.15</delay>
+		<count>-1</count>
+		<x-offset>7.3773</x-offset>
+    <!--<y-offset>-6.46948</y-offset>-->
+    <y-offset>-8.49393</y-offset>
+		<z-offset>-1.46325</z-offset>
+		<yaw-offset>0</yaw-offset>
+		<pitch-offset>0</pitch-offset>
+		<no-roll>true</no-roll>
+		<life>120</life>
+		<wind>false</wind>
+		<weight>120</weight>
+		<cd>0.075</cd>
+		<eda>0.01051198</eda>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+		<submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>
+	</submodel>
+
+  <submodel>
+    <name>S-5L3-blank</name>
+    <model>Aircraft/MiG-21UPG/Models/Effects/S-5/rocket_blank.xml</model>
+    <trigger>controls/armament/trigger-UB32-3-L</trigger>
+    <speed>2000</speed>
+    <repeat>true</repeat>
+    <delay>0.151</delay>
+    <count>-1</count>
+    <x-offset>7.3773</x-offset>
+    <!--<y-offset>-6.46948</y-offset>-->
+    <y-offset>-8.49393</y-offset>
+    <z-offset>-1.46325</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <no-roll>true</no-roll>
+    <life>0.6</life>
+    <!--the rocket motor on S-8 actually runs for 0.69 sec, on S-5 0.55-0.92 sec, after that inertia-->
+    <wind>false</wind>
+    <weight>120</weight>
+    <cd>0.075</cd>
+    <eda>0.01051198</eda>
+    <collision>false</collision>
+    <!--<collision-report>sim/ai/aircraft/collision/gun</collision-report>-->
+    <impact>false</impact>
+    <!--<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>-->
+  </submodel>
+
+  <submodel>
+    <name>S-5R2</name>
+    <!--<model>Aircraft/MiG-21UPG/Models/Stores/Rocket.xml</model>-->
+    <model>Aircraft/MiG-21UPG/Models/Stores/S-5/s-5-sub.xml</model>
+    <trigger>controls/armament/trigger-UB32-2-R</trigger>
+    <speed>2000</speed>
+    <repeat>true</repeat>
+    <delay>0.15</delay>
+    <count>-1</count>
+    <x-offset>10.3773</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-1.46325</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <no-roll>true</no-roll>
+    <life>120</life>
+    <wind>false</wind>
+    <weight>120</weight>
+    <cd>0.075</cd>
+    <eda>0.01051198</eda>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>S-5R2-blank</name>
+    <model>Aircraft/MiG-21UPG/Models/Effects/S-5/rocket_blank.xml</model>
+    <trigger>controls/armament/trigger-UB32-2-R</trigger>
+    <speed>2000</speed>
+    <repeat>true</repeat>
+    <delay>0.151</delay>
+    <count>-1</count>
+    <x-offset>10.3773</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-1.46325</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <no-roll>true</no-roll>
+    <life>0.6</life>
+    <wind>false</wind>
+    <weight>120</weight>
+    <cd>0.075</cd>
+    <eda>0.01051198</eda>
+    <collision>false</collision>
+    <!--<collision-report>sim/ai/aircraft/collision/gun</collision-report>-->
+    <impact>false</impact>
+    <!--<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>-->
+  </submodel>
+	
+	<submodel>
+		<name>S-5R4</name>
+		<!--<model>Aircraft/MiG-21UPG/Models/Stores/Rocket.xml</model>-->
+    <model>Aircraft/MiG-21UPG/Models/Stores/S-5/s-5-sub.xml</model>
+		<trigger>controls/armament/trigger-UB32-4-R</trigger>
+		<speed>2000</speed>
+		<repeat>true</repeat>
+		<delay>0.15</delay>
+		<count>-1</count>
+		<x-offset>7.3773</x-offset>
+    <!--<y-offset>6.46948</y-offset>-->
+        <y-offset>8.49393</y-offset>
+		<z-offset>-1.46325</z-offset>
+		<yaw-offset>0</yaw-offset>
+		<pitch-offset>0</pitch-offset>
+		<no-roll>true</no-roll>
+		<life>120</life>
+		<wind>false</wind>
+		<weight>120</weight>
+		<cd>0.075</cd>
+		<eda>0.01051198</eda>
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+		<submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>S-5R4-blank</name>
+    <model>Aircraft/MiG-21UPG/Models/Effects/S-5/rocket_blank.xml</model>
+    <trigger>controls/armament/trigger-UB32-4-R</trigger>
+    <speed>2000</speed>
+    <repeat>true</repeat>
+    <delay>0.151</delay>
+    <count>-1</count>
+    <x-offset>7.3773</x-offset>
+    <!--<y-offset>6.46948</y-offset>-->
+    <y-offset>8.49393</y-offset>
+    <z-offset>-1.46325</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <no-roll>true</no-roll>
+    <life>0.6</life>
+    <wind>false</wind>
+    <weight>120</weight>
+    <cd>0.075</cd>
+    <eda>0.01051198</eda>
+    <collision>false</collision>
+    <!--<collision-report>sim/ai/aircraft/collision/gun</collision-report>-->
+    <impact>false</impact>
+    <!--<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>-->
+  </submodel>
+
+  <!--<submodel>
+    <name>S-5 Backblast</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/S-5/s-5-backblast.xml</model>
+    <trigger>controls/armament/trigger-S-13-R</trigger>
+    <trigger-once>true</trigger-once>
+    <speed>1200.0</speed>
+    <repeat>true</repeat>
+    <delay>0.1</delay>
+    <life>0.1</life>
+    <count>-1</count>
+    <offsets>
+      <x-offset>10.3773</x-offset>
+      <y-offset>6.46948</y-offset>
+      <z-offset>-1.46325</z-offset>
+    </offsets>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>1.0</eda>
+    <weight>520.0</weight>
+    <cd>0.47</cd>
+    <collision>false</collision>
+    <impact>false</impact>
+  </submodel>-->
+
+  <!-- Bombs -->
+
+  <submodel>
+    <name>FAB-250L bomb</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/FAB-250L.xml</model>
+    <!-- just for test -->
+    <trigger>controls/armament/trigger3</trigger>
+    <trigger-once>true</trigger-once>
+    <speed>0.0</speed>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-3.0</pitch-offset>
+    <eda>1.0</eda>
+    <weight>520.0</weight>
+    <cd>0.3</cd>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bomb</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+
+  </submodel>
+
+  <submodel>
+    <name>FAB-250R bomb</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/FAB-250R.xml</model>
+    <!-- just for test -->
+    <trigger>controls/armament/trigger3</trigger>
+    <trigger-once>true</trigger-once>
+    <speed>0.0</speed>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-3.0</pitch-offset>
+    <eda>1.0</eda>
+    <weight>520.0</weight>
+    <cd>0.3</cd>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bomb</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Bomb/Bomb-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>FAB-500L heavy-bomb</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/FAB-500L.xml</model>
+    <!-- just for test -->
+    <trigger>controls/armament/trigger4</trigger>
+    <trigger-once>true</trigger-once>
+    <speed>0.0</speed>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-3.0</pitch-offset>
+    <eda>1.0</eda>
+    <weight>1040.0</weight>
+    <cd>0.3</cd>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bomb</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Bomb/Bomb-500.xml</submodel-path>
+
+  </submodel>
+
+  <submodel>
+    <name>FAB-500R heavy-bomb</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/FAB-500R.xml</model>
+    <!-- just for test -->
+    <trigger>controls/armament/trigger4</trigger>
+    <trigger-once>true</trigger-once>
+    <speed>0.0</speed>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-3.0</pitch-offset>
+    <eda>1.0</eda>
+    <weight>1040.0</weight>
+    <cd>0.3</cd>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bomb</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Bomb/Bomb-500.xml</submodel-path>
+  </submodel>
+	
+	<!-- Flares -->
+	
+	<submodel>
+		<name>Flare left</name>
+		<model>Aircraft/MiG-21UPG/Models/Effects/Flare/Flare.xml</model>
+		<trigger>controls/armament/trigger2</trigger>
+		<speed>400</speed>
+		<repeat>true</repeat>
+		<delay>0.25</delay>
+		<count>-1</count>
+    <x-offset>-2.1221</x-offset>
+    <y-offset> 4.9067</y-offset>
+    <z-offset> 0.5225</z-offset>
+		<yaw-offset>90</yaw-offset>
+		<pitch-offset>75</pitch-offset>
+		<life>2.5</life>
+		<buoyancy>25</buoyancy>
+		<eda>1</eda>
+		<cd>0.2</cd>
+		<random>true</random>
+		<no-roll>true</no-roll>
+	</submodel>
+	
+	
+	<submodel>
+		<name>Flare right</name>
+		<model>Aircraft/MiG-21UPG/Models/Effects/Flare/Flare.xml</model>
+		<trigger>controls/armament/trigger2</trigger>
+		<speed>400</speed>
+		<repeat>true</repeat>
+		<delay>0.25</delay>
+		<count>-1</count>
+		<x-offset>-2.1221</x-offset>
+		<y-offset> -4.9067</y-offset>
+		<z-offset>  0.5225</z-offset>
+		<yaw-offset>-90</yaw-offset>
+		<pitch-offset>75</pitch-offset>
+		<life>2.5</life>
+		<buoyancy>25</buoyancy>
+		<eda>1</eda>
+		<cd>0.2</cd>
+		<random>true</random>
+		<no-roll>true</no-roll>
+	</submodel>
+
+  <!-- Missiles -->
+
+  <submodel>
+    <name>R-60 L missile</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R-60Smoke.xml</model>
+    <trigger>controls/armament/station[3]/m1release</trigger>
+    <speed>600</speed>
+    <repeat>false</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset>7</x-offset>
+    <y-offset>-8.49393</y-offset>
+    <z-offset>-1.07286</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>1</pitch-offset>
+    <cd>0</cd>
+    <weight>191</weight>
+    <eda>2.81</eda>
+    <life>25</life>
+    <buoyancy>31</buoyancy>
+    <aero-stabilised>true</aero-stabilised>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Missile/Missile-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>R-60 R missile</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R-60Smoke.xml</model>
+    <trigger>controls/armament/station[4]/m1release</trigger>
+    <speed>600</speed>
+    <repeat>false</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset>7</x-offset>
+    <y-offset>8.49393</y-offset>
+    <z-offset>-1.07286</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>1</pitch-offset>
+    <cd>0</cd>
+    <weight>191</weight>
+    <eda>2.81</eda>
+    <life>25</life>
+    <buoyancy>31</buoyancy>
+    <aero-stabilised>true</aero-stabilised>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Missile/Missile-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>R-73 L missile</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R-60Smoke.xml</model>
+    <trigger>controls/armament/station[3]/m2release</trigger>
+    <speed>600</speed>
+    <repeat>false</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset>7</x-offset>
+    <y-offset>-8.49393</y-offset>
+    <z-offset>-1.07286</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>1</pitch-offset>
+    <cd>0</cd>
+    <weight>231</weight>
+    <eda>2.81</eda>
+    <life>25</life>
+    <buoyancy>31</buoyancy>
+    <aero-stabilised>true</aero-stabilised>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Missile/Missile-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>R-73 R missile</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R-60Smoke.xml</model>
+    <trigger>controls/armament/station[4]/m2release</trigger>
+    <speed>600</speed>
+    <repeat>false</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset>7</x-offset>
+    <y-offset>8.95669</y-offset>
+    <z-offset>-1.07286</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>1</pitch-offset>
+    <cd>0</cd>
+    <weight>231</weight>
+    <eda>2.81</eda>
+    <life>25</life>
+    <buoyancy>31</buoyancy>
+    <aero-stabilised>true</aero-stabilised>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Missile/Missile-Submodel.xml</submodel-path>
+  </submodel>
+  
+  <submodel>
+    <name>R-77 L missile</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R-60Smoke.xml</model>
+    <trigger>controls/armament/station[1]/m1release</trigger>
+    <speed>3873</speed>
+    <repeat>false</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset>7</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-2.07286</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>1</pitch-offset>
+    <cd>0</cd>
+    <weight>191</weight>
+    <eda>2.81</eda>
+    <life>25</life>
+    <buoyancy>31</buoyancy>
+    <aero-stabilised>true</aero-stabilised>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Missile/Missile-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>R-77 R missile</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R-60Smoke.xml</model>
+    <trigger>controls/armament/station[2]/m1release</trigger>
+    <speed>3873</speed>
+    <repeat>false</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset>7</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-2.07286</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>1</pitch-offset>
+    <cd>0</cd>
+    <weight>191</weight>
+    <eda>2.81</eda>
+    <life>25</life>
+    <buoyancy>31</buoyancy>
+    <aero-stabilised>true</aero-stabilised>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Missile/Missile-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>R-27 L missile</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R-60Smoke.xml</model>
+    <trigger>controls/armament/station[1]/m2release</trigger>
+    <speed>3189</speed>
+    <repeat>false</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset>7</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-2.07286</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>1</pitch-offset>
+    <cd>0</cd>
+    <weight>191</weight>
+    <eda>2.81</eda>
+    <life>25</life>
+    <buoyancy>31</buoyancy>
+    <aero-stabilised>true</aero-stabilised>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Missile/Missile-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>R-27 R missile</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R-60Smoke.xml</model>
+    <trigger>controls/armament/station[2]/m2release</trigger>
+    <speed>3189</speed>
+    <repeat>false</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <x-offset>7</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-2.07286</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>1</pitch-offset>
+    <cd>0</cd>
+    <weight>191</weight>
+    <eda>2.81</eda>
+    <life>25</life>
+    <buoyancy>31</buoyancy>
+    <aero-stabilised>true</aero-stabilised>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Missile/Missile-Submodel.xml</submodel-path>
+  </submodel>
+
+  <!-- Dtop Tanks -->
+
+  <submodel>
+    <name>ExtTank-L</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/PTB-490-submodel.xml</model>
+    <trigger>controls/armament/station[3]/tjettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>-8.49393</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <contents>consumables/fuel/tank[6]</contents>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>ExtTank-C</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/PTB-490-submodel.xml</model>
+    <trigger>controls/armament/station[0]/tjettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-4.89514</z-m>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <contents>consumables/fuel/tank[7]</contents>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>ExtTank-R</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/PTB-490-submodel.xml</model>
+    <trigger>controls/armament/station[4]/tjettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>8.49393</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <contents>consumables/fuel/tank[8]</contents>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <!-- Weapons jettisoned -->
+
+  <submodel>
+    <name>JettisonFAB250-1</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/FAB250-submodel.xml</model>
+    <trigger>controls/armament/station[1]/b1jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-3.0</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>JettisonFAB250-2</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/FAB250-submodel.xml</model>
+    <trigger>controls/armament/station[2]/b1jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-3.0</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+    <submodel>
+    <name>JettisonFAB500-1</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/FAB500-submodel.xml</model>
+    <trigger>controls/armament/station[1]/b2jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-3.0</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>JettisonFAB500-2</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/FAB500-submodel.xml</model>
+    <trigger>controls/armament/station[2]/b2jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-3.0</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-UB32-1</name>
+    <model>Aircraft/MiG-21UPG/Models/Payload/UB-32/UB-32-submodel.xml</model>
+    <trigger>controls/armament/station[1]/r1jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-3.0</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-UB32-2</name>
+    <model>Aircraft/MiG-21UPG/Models/Payload/UB-32/UB-32-submodel.xml</model>
+    <trigger>controls/armament/station[2]/r1jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-3.0</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-UB32-3</name>
+    <model>Aircraft/MiG-21UPG/Models/Payload/UB-32/UB-32-submodel.xml</model>
+    <trigger>controls/armament/station[3]/r1jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>-8.49393</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-UB32-4</name>
+    <model>Aircraft/MiG-21UPG/Models/Payload/UB-32/UB-32-submodel.xml</model>
+    <trigger>controls/armament/station[4]/r1jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>8.49393</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-R73-3</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R73-submodel.xml</model>
+    <trigger>controls/armament/station[3]/m1jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>-8.49393</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-R73-4</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R73-submodel.xml</model>
+    <trigger>controls/armament/station[4]/m1jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>8.49393</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-R60-3</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R60-submodel.xml</model>
+    <trigger>controls/armament/station[3]/m2jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>-8.49393</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-R60-4</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R60-submodel.xml</model>
+    <trigger>controls/armament/station[4]/m2jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>8.49393</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-R77-1</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R77-submodel.xml</model>
+    <trigger>controls/armament/station[1]/m1jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-R77-2</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R77-submodel.xml</model>
+    <trigger>controls/armament/station[2]/m1jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-R27-1</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R27-submodel.xml</model>
+    <trigger>controls/armament/station[1]/m2jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>Jettison-R27-2</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/R27-submodel.xml</model>
+    <trigger>controls/armament/station[2]/m2jettison</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>-1</count>
+    <x-offset>0.19319</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-3.265</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <wind>false</wind>
+    <eda>2.8</eda>
+    <weight>250</weight>
+    <cd>0.035</cd>
+    <impact>true</impact>
+    <impact-reports>sim/ai/aircraft/impact/droptank</impact-reports>
+  </submodel>
+  
+  <!-- Dragchute jettisoned -->
+  
+  <submodel>
+    <name>Braking Parachute</name>
+    <model>Aircraft/MiG-21UPG/Models/Stores/Chute.ac</model>
+    <trigger>controls/flight/chute_jettisoned</trigger>
+    <speed>0</speed>
+    <repeat>true</repeat>
+    <delay>0.2</delay>
+    <count>-1</count>
+    <x-offset>-35</x-offset>
+    <y-offset>0</y-offset>
+    <z-offset>0</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <buoyancy>25</buoyancy>
+    <wind>true</wind>
+    <life>4.0</life>
+    <eda>250</eda>
+    <weight>50</weight>
+    <aero-stabilised>false</aero-stabilised>
+  </submodel>
+	
+</PropertyList>
