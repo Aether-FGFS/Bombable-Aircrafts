@@ -1,3 +1,5 @@
+I have just updated this Beta version with weapons impact sound, corrected missile effect, updated bombable include - AI now attack in AI scenario Dogfihgt. Aether 2026. 
+
 # MiG-21UPG
 
 <a href='https://postimg.cc/tnDjLWVg' target='_blank'><img src='https://i.postimg.cc/tnDjLWVg/Splash4.png' border='0' alt='Splash4'/></a>
