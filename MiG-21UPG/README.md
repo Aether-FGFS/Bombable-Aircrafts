@@ -1,4 +1,4 @@
-I have just updated this Beta version with weapons impact sound, corrected missile effect, updated bombable include - AI now attack in AI scenario Dogfight. 
+I have just updated this Beta version with gun,rocket and missile impact sound, corrected missile effect, updated bombable include - AI now attack in AI scenario Dogfight. 
 2 files from original installation are missing, Models/RFcard1.psd and Models/RFcard2.psd. their size is over my upload limit. Add them from original installation if you wish to have it comlpete.   Aether 2026.
 __________________________________________________________________________________________________________________________________________________________________________
 
