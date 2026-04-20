@@ -3,6 +3,9 @@ ________________________________________________________________________________
 
 Installation: Copy and paste Aircraft, that you would like to use, into your fgdata/Aircraft directory.
 
+For MPdamage, you must have installed AI model with added bombableinclude.xml or Impacts will not work over multiplayer.
+ Install AI aircraft into fgdata/AI/Aircraft , and you are ready for MP action.
+
 You can find many bombable aircrafts directly inside FG hangar, Helijah hangar and other hangars and places. 
 
 
